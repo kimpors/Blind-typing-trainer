@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TypingField = new System.Windows.Forms.RichTextBox();
             this.Start = new System.Windows.Forms.Button();
             this.Time = new System.Windows.Forms.Label();
             this.Speed = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.timerTick = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // TypingField
@@ -60,6 +62,7 @@
             this.Start.TabIndex = 1;
             this.Start.Text = "Start";
             this.Start.UseVisualStyleBackColor = true;
+            this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
             // Time
             // 
@@ -97,6 +100,10 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Speed:";
             // 
+            // timerTick
+            // 
+            this.timerTick.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -125,6 +132,7 @@
         private System.Windows.Forms.Label Speed;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timerTick;
     }
 }
 

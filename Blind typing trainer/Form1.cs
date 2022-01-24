@@ -20,11 +20,10 @@ namespace Blind_typing_trainer
         }
 
         private static int index = 0;
+        private static TimeSpan timer = new TimeSpan(0, 0, 0);
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             label1.Text = e.KeyChar.ToString();
-
-            if (TypingField.Text.Length == 0) return;
 
             if (e.KeyChar == '\b')
             {
@@ -37,21 +36,39 @@ namespace Blind_typing_trainer
                 return;
             }
 
-            if (index == TypingField.Text.Length) return;
+            if (index == TypingField.Text.Length)
+            {
+                timerTick.Enabled = false;
+                timer = new TimeSpan(0,0,0);
+                return;
+            }
 
             index++;
             TypingField.SelectionStart = index - 1;
             TypingField.SelectionLength = 1;
 
-            if (e.KeyChar != TypingField.Text[index - 1])
-                TypingField.SelectionBackColor = Color.Red;
-
 
             if (e.KeyChar == TypingField.Text[index - 1])
                 TypingField.SelectionBackColor = Color.GreenYellow;
+            else
+                TypingField.SelectionBackColor = Color.Red;
 
 
             e.Handled = true;
+        }
+
+        private void Start_Click(object sender, EventArgs e)
+        {
+            timerTick.Enabled = !timerTick.Enabled;
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            if (index != TypingField.Text.Length)
+            {
+                timer = timer.Add(new TimeSpan(0, 0, 1));
+                Time.Text = timer.ToString();
+            }
         }
     }
 }
