@@ -20,40 +20,44 @@ namespace Blind_typing_trainer
             TypingField.Text = "Привет как дела, Slimy sculpin sand tiger wolf-eel marlin tubeblenny, oceanic flyingfish, cookie-cutter shark porbeagle shark:Peter's";
         }
 
-        private int index = 0;
+        private int symbolCount = 0, mistake;
         private TimeSpan timer = new TimeSpan(0, 0, 0);
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             label1.Focus();
-            Speed.Text = e.KeyChar.ToString();
 
             if (e.KeyChar == '\b')
             {
-                if (index == 0) return;
+      
+                if (symbolCount == 0) return;
+                mistake++;
 
-                TypingField.SelectionStart = index - 1;
-                TypingField.SelectionLength = index;
+                TypingField.SelectionStart = symbolCount - 1;
+                TypingField.SelectionLength = symbolCount;
                 TypingField.SelectionBackColor = Color.GhostWhite;
-                index--;
+                symbolCount--;
                 return;
             }
 
-            if (index == TypingField.Text.Length)
+            if (symbolCount == TypingField.Text.Length)
             {
                 timerTick.Enabled = false;
                 timer = new TimeSpan(0,0,0);
                 return;
             }
 
-            index++;
-            TypingField.SelectionStart = index - 1;
+            symbolCount++;
+            TypingField.SelectionStart = symbolCount - 1;
             TypingField.SelectionLength = 1;
 
 
-            if (e.KeyChar == TypingField.Text[index - 1])
+            if (e.KeyChar == TypingField.Text[symbolCount - 1])
                 TypingField.SelectionBackColor = Color.GreenYellow;
             else
+            {
+                mistake++;
                 TypingField.SelectionBackColor = Color.Red;
+            }
         }
 
         private void Start_Click(object sender, EventArgs e)
@@ -63,10 +67,12 @@ namespace Blind_typing_trainer
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            if (index != TypingField.Text.Length)
+            if (symbolCount != TypingField.Text.Length)
             {
                 timer = timer.Add(new TimeSpan(0, 0, 1));
                 Time.Text = timer.ToString();
+
+                Speed.Text = ((symbolCount + mistake) / (timer.TotalSeconds / 60) / 5).ToString(".00");
             }
         }
 
