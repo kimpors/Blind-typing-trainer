@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 
@@ -19,11 +20,12 @@ namespace Blind_typing_trainer
             TypingField.Text = "Привет как дела, Slimy sculpin sand tiger wolf-eel marlin tubeblenny, oceanic flyingfish, cookie-cutter shark porbeagle shark:Peter's";
         }
 
-        private static int index = 0;
-        private static TimeSpan timer = new TimeSpan(0, 0, 0);
+        private int index = 0;
+        private TimeSpan timer = new TimeSpan(0, 0, 0);
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            label1.Text = e.KeyChar.ToString();
+            label1.Focus();
+            Speed.Text = e.KeyChar.ToString();
 
             if (e.KeyChar == '\b')
             {
@@ -52,9 +54,6 @@ namespace Blind_typing_trainer
                 TypingField.SelectionBackColor = Color.GreenYellow;
             else
                 TypingField.SelectionBackColor = Color.Red;
-
-
-            e.Handled = true;
         }
 
         private void Start_Click(object sender, EventArgs e)
@@ -68,6 +67,21 @@ namespace Blind_typing_trainer
             {
                 timer = timer.Add(new TimeSpan(0, 0, 1));
                 Time.Text = timer.ToString();
+            }
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if (Path.GetExtension(openFileDialog1.FileName) == ".txt")
+                {
+                    TypingField.Text = File.ReadAllText(openFileDialog1.FileName);
+                }
+                else
+                {
+                    TypingField.LoadFile(openFileDialog1.FileName);
+                }
             }
         }
     }
