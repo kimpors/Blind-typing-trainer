@@ -43,22 +43,25 @@
             this.freeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.StartTimer = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TypingField
             // 
-            this.TypingField.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.TypingField.AutoWordSelection = true;
+            this.TypingField.Cursor = System.Windows.Forms.Cursors.Default;
             this.TypingField.DetectUrls = false;
             this.TypingField.Enabled = false;
             this.TypingField.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TypingField.Location = new System.Drawing.Point(0, 27);
             this.TypingField.Name = "TypingField";
             this.TypingField.ReadOnly = true;
-            this.TypingField.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.TypingField.ShowSelectionMargin = true;
+            this.TypingField.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.TypingField.ShortcutsEnabled = false;
             this.TypingField.Size = new System.Drawing.Size(745, 239);
             this.TypingField.TabIndex = 0;
+            this.TypingField.TabStop = false;
             this.TypingField.Text = "";
             // 
             // Start
@@ -121,7 +124,7 @@
             this.modeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(745, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(742, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -136,7 +139,7 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -152,23 +155,34 @@
             // freeToolStripMenuItem
             // 
             this.freeToolStripMenuItem.Name = "freeToolStripMenuItem";
-            this.freeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.freeToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.freeToolStripMenuItem.Text = "Free";
             // 
             // raceToolStripMenuItem
             // 
             this.raceToolStripMenuItem.Name = "raceToolStripMenuItem";
-            this.raceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.raceToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.raceToolStripMenuItem.Text = "Race";
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.Filter = "Text| *.txt;*.rtf";
             // 
+            // StartTimer
+            // 
+            this.StartTimer.AutoSize = true;
+            this.StartTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StartTimer.Location = new System.Drawing.Point(182, 269);
+            this.StartTimer.Name = "StartTimer";
+            this.StartTimer.Size = new System.Drawing.Size(39, 42);
+            this.StartTimer.TabIndex = 9;
+            this.StartTimer.Text = "3";
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(745, 313);
+            this.ClientSize = new System.Drawing.Size(742, 313);
+            this.Controls.Add(this.StartTimer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Speed);
@@ -190,8 +204,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox TypingField;
         private System.Windows.Forms.Button Start;
         private System.Windows.Forms.Label Time;
         private System.Windows.Forms.Label Speed;
@@ -205,6 +217,8 @@
         private System.Windows.Forms.ToolStripMenuItem freeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem raceToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.RichTextBox TypingField;
+        private System.Windows.Forms.Label StartTimer;
     }
 }
 

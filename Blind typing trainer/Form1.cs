@@ -14,65 +14,79 @@ namespace Blind_typing_trainer
 {
     public partial class Form1 : Form
     {
+        private int symbolCount = 0, mistake;
+        private TimeSpan timer = new TimeSpan(0, 0, 0);
         public Form1()
         {
             InitializeComponent();
-            TypingField.Text = "Привет как дела, Slimy sculpin sand tiger wolf-eel marlin tubeblenny, oceanic flyingfish, cookie-cutter shark porbeagle shark:Peter's";
+            TypingField.Text = "Text here!";
         }
-
-        private int symbolCount = 0, mistake;
-        private TimeSpan timer = new TimeSpan(0, 0, 0);
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             label1.Focus();
-
-            if (e.KeyChar == '\b')
+            if (StartTimer.Text == "0")
             {
-      
-                if (symbolCount == 0) return;
-                mistake++;
-
-                TypingField.SelectionStart = symbolCount - 1;
-                TypingField.SelectionLength = symbolCount;
-                TypingField.SelectionBackColor = Color.GhostWhite;
-                symbolCount--;
-                return;
-            }
-
-            if (symbolCount == TypingField.Text.Length)
-            {
-                timerTick.Enabled = false;
-                timer = new TimeSpan(0,0,0);
-                return;
-            }
-
-            symbolCount++;
-            TypingField.SelectionStart = symbolCount - 1;
-            TypingField.SelectionLength = 1;
+                TypingField.SelectionLength = 1;
 
 
-            if (e.KeyChar == TypingField.Text[symbolCount - 1])
-                TypingField.SelectionBackColor = Color.GreenYellow;
-            else
-            {
-                mistake++;
-                TypingField.SelectionBackColor = Color.Red;
+                if (e.KeyChar == '\b')
+                {
+                    if (symbolCount == 0) return;
+
+                    TypingField.SelectionStart = symbolCount;
+                    TypingField.SelectionBackColor = DefaultBackColor;
+                    TypingField.SelectionColor = DefaultForeColor;
+
+                    symbolCount--;
+                    mistake++;
+                    return;
+                }
+
+                TypingField.SelectionStart = symbolCount;
+
+                if (e.KeyChar == TypingField.Text[symbolCount])
+                    TypingField.SelectionColor = Color.LimeGreen;
+                else
+                {
+                    mistake++;
+                    TypingField.SelectionBackColor = Color.Red;
+                }
+
+
+                symbolCount++;
+                if (symbolCount == TypingField.Text.Length)
+                {
+                    timerTick.Enabled = false;
+                    timer = new TimeSpan(0, 0, 0);
+                    StartTimer.Text = "3";
+                    return;
+                }
+
+
+                if (symbolCount % (int)(TypingField.Width / TypingField.Font.Size) == 0) TypingField.ScrollToCaret();
             }
         }
 
         private void Start_Click(object sender, EventArgs e)
         {
             timerTick.Enabled = !timerTick.Enabled;
+            StartTimer.Text = "3";
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            if (symbolCount != TypingField.Text.Length)
+            if (symbolCount == TypingField.Text.Length) return;
+
+            if (StartTimer.Text == "0")
             {
                 timer = timer.Add(new TimeSpan(0, 0, 1));
                 Time.Text = timer.ToString();
 
-                Speed.Text = ((symbolCount + mistake) / (timer.TotalSeconds / 60) / 5).ToString(".00");
+                Speed.Text = ((symbolCount + mistake) / (timer.TotalMinutes) / 5).ToString(".00");
+            }
+            else
+            {
+                StartTimer.Text = (Convert.ToInt16(StartTimer.Text) - 1).ToString();
             }
         }
 
@@ -88,6 +102,8 @@ namespace Blind_typing_trainer
                 {
                     TypingField.LoadFile(openFileDialog1.FileName);
                 }
+
+                symbolCount = mistake = -1;
             }
         }
     }
