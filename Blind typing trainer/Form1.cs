@@ -11,114 +11,90 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
 
-
 namespace Blind_typing_trainer
 {
     public partial class Form1 : Form
     {
-        private int symbolCount = 0, mistake = 0;
+        private int symbolCount = 0, mistake = 0, mistakePlace = 0;
         private bool isLight = true;
         private TimeSpan timer = new TimeSpan(0, 0, 0);
+        private FabricTheme currTheme = new FabricLight();
+
         public Form1()
         {
             InitializeComponent();
+
             TypingField.Text = "Text here!";
-            Start.FlatAppearance.BorderSize = 0;
-            Theme.FlatAppearance.BorderSize = 0;
-            Reset.FlatAppearance.BorderSize = 0;
-            LightTheme();
+            Start.FlatAppearance.BorderSize = Theme.FlatAppearance.BorderSize = Reset.FlatAppearance.BorderSize = 0;
+            SeTheme();
         }
 
-        private void currTheme()
+        private void SeTheme()
         {
-            if (isLight) LightTheme();
-            else DarkTheme();
-        }
-        private void LightTheme()
-        {
-            menuStrip1.BackColor = Color.FromArgb(159, 167, 255);
-            menuStrip1.ForeColor = Color.FromArgb(193, 196, 226);
+            var theme = currTheme.CreateTheme();
 
-            Start.BackColor = Color.FromArgb(202, 207, 255);
-            Start.ForeColor = Color.FromArgb(66, 72, 128);
+            menuStrip1.Renderer = new ToolStripProfessionalRenderer(theme.CreateColorStrip());
 
-            TypingField.BackColor = Color.FromArgb(202, 207, 255);
-            Restart();
+            menuStrip1.BackColor = theme.darkBackColor;
+            menuStrip1.ForeColor = theme.foreColor;
 
-            Time.ForeColor = Color.FromArgb(66, 72, 128);
-            Speed.ForeColor = Color.FromArgb(66, 72, 128);
-            StartTimer.ForeColor = Color.FromArgb(66, 72, 128);
-            label1.ForeColor = Color.FromArgb(66, 72, 128);
-            label2.ForeColor = Color.FromArgb(66, 72, 128);
+            openToolStripMenuItem.ForeColor = theme.foreColor;
+            freeToolStripMenuItem.ForeColor = theme.foreColor;
+            raceToolStripMenuItem.ForeColor = theme.foreColor;
+            languageToolStripMenuItem.ForeColor = theme.foreColor;
+            themeToolStripMenuItem.ForeColor = theme.foreColor;
 
+            BackColor = theme.darkBackColor;
 
+            TypingField.BackColor = theme.backColor;
+            TypingField.ForeColor = theme.foreColor;
 
-            BackColor = Color.FromArgb(159, 167, 255);
-            ForeColor = Color.FromArgb(66, 72, 128);
-        }
-        private void DarkTheme()
-        {
-            menuStrip1.BackColor = Color.FromArgb(45, 48, 78);
-            menuStrip1.ForeColor = Color.FromArgb(193, 196, 226);
-
-
-            Start.BackColor = Color.FromArgb(77, 80, 112);
-            Start.ForeColor = Color.FromArgb(193, 196, 226);
-
-            Theme.BackColor = Color.FromArgb(45, 48, 78);
-
-            TypingField.BackColor = Color.FromArgb(77, 80, 112);
-            Restart();
-
-            Time.ForeColor = Color.FromArgb(193, 196, 226);
-            Speed.ForeColor = Color.FromArgb(193, 196, 226);
-            StartTimer.ForeColor = Color.FromArgb(193, 196, 226);
-            label1.ForeColor = Color.FromArgb(193, 196, 226);
-            label2.ForeColor = Color.FromArgb(193, 196, 226);
-
-
-            BackColor = Color.FromArgb(45, 48, 78);
-            ForeColor = Color.FromArgb(193, 196, 226);
-        }
-
-        private void Restart()
-        {
             TypingField.SelectAll();
+            TypingField.SelectionBackColor = theme.backColor;
+            TypingField.SelectionColor = theme.foreColor;
 
-            if (isLight)
-                TypingField.SelectionColor = Color.FromArgb(66, 72, 128);
-            else
-                TypingField.SelectionColor = Color.FromArgb(193, 196, 226);
+            TypingField.Select(0, mistakePlace);
+            TypingField.SelectionColor = Color.LimeGreen;
+
+            TypingField.Select(mistakePlace, symbolCount - mistakePlace);
+            TypingField.SelectionBackColor = Color.Red;
+
+
+            Start.BackColor = theme.backColor;
+            Start.ForeColor = theme.foreColor;
+
+            Time.ForeColor = theme.foreColor;
+            Speed.ForeColor = theme.foreColor;
+            StartTimer.ForeColor = theme.foreColor;
+            label1.ForeColor = theme.foreColor;
+            label2.ForeColor = theme.foreColor;
         }
-
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (StartTimer.Text == "0")
             {
                 TypingField.SelectionLength = 1;
+                TypingField.SelectionStart = symbolCount;
 
                 if (e.KeyChar == '\b')
                 {
                     if (symbolCount == 0) return;
 
-                    TypingField.SelectionStart = symbolCount;
-                    TypingField.SelectionBackColor = DefaultBackColor;
-                    TypingField.SelectionColor = DefaultForeColor;
-
-                    symbolCount--;
                     mistake++;
+                    TypingField.SelectionStart = symbolCount -= 1;
+
+                    SeTheme();
                     return;
                 }
 
-                TypingField.SelectionStart = symbolCount;
-
-                if (e.KeyChar == TypingField.Text[symbolCount])
+                if (e.KeyChar == TypingField.Text[symbolCount] && mistakePlace == 0)
                 {
                     TypingField.SelectionColor = Color.LimeGreen;
-                }  
+                }
                 else
                 {
                     mistake++;
+                    mistakePlace = mistakePlace == 0 ? symbolCount : mistakePlace;
                     TypingField.SelectionBackColor = Color.Red;
                 }
 
@@ -130,6 +106,7 @@ namespace Blind_typing_trainer
                     timerTick.Enabled = false;
                     timer = new TimeSpan(0, 0, 0);
                     StartTimer.Text = "3";
+                    Start.Text = "Start";
                     return;
                 }
 
@@ -137,47 +114,51 @@ namespace Blind_typing_trainer
                 if (symbolCount % (int)(TypingField.Width / TypingField.Font.Size) == 0) TypingField.ScrollToCaret();
             }
         }
-
         private void Start_Click(object sender, EventArgs e)
         {
             timerTick.Enabled = !timerTick.Enabled;
             StartTimer.Text = "3";
             Start.Text = timerTick.Enabled && symbolCount != TypingField.Text.Length ? "Stop" : "Start";
         }
-
         private void timer_Tick(object sender, EventArgs e)
         {
-            if (symbolCount == TypingField.Text.Length) return;
-
             if (StartTimer.Text == "0")
             {
                 timer = timer.Add(new TimeSpan(0, 0, 1));
                 Time.Text = timer.ToString();
 
-                Speed.Text = ((symbolCount + mistake) / (timer.TotalMinutes) / 5).ToString();
+                Speed.Text = ((int)((symbolCount + mistake) / (timer.TotalMinutes) / 5)).ToString() + "WP";
             }
             else
             {
-                StartTimer.Text = (Convert.ToInt16(StartTimer.Text) - 1).ToString();
+                StartTimer.Text = (int.Parse(StartTimer.Text) - 1).ToString();
             }
         }
         private void Theme_Click(object sender, EventArgs e)
         {
             isLight = !isLight;
-            currTheme();
-        }
 
+            if (isLight)
+                currTheme = new FabricLight();
+            else
+                currTheme = new FabricDark();
+
+            SeTheme();
+        }
         private void Reset_Click(object sender, EventArgs e)
         {
-            symbolCount = mistake = 0;
-            Restart();
+            if (Start.Text == "Start")
+            {
+                symbolCount = mistake = mistakePlace = 0;
+                Speed.Text = "0WP";
+                Time.Text = "00:00:00";
+                SeTheme();
+            }
         }
-
         private void TypingField_SelectionChanged(object sender, EventArgs e)
         {
             label1.Focus();
         }
-
         private void TypingField_MouseMove(object sender, MouseEventArgs e)
         {
             if (!TypingField.ClientRectangle.Contains(e.Location))
@@ -185,6 +166,11 @@ namespace Blind_typing_trainer
 
             else if (!TypingField.Capture)
                 TypingField.Capture = true;
+        }
+
+        private void languageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -200,7 +186,7 @@ namespace Blind_typing_trainer
                     TypingField.LoadFile(openFileDialog1.FileName);
                 }
 
-                symbolCount = mistake = 0;
+                Reset.PerformClick();
             }
         }
     }
