@@ -117,29 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="timerTick.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>233, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>373, 17</value>
-  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TypingField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Start.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Time.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Speed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="menuStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAdhJREFUWEftlUtOwlAUhukjEBIGpCtgCagb6NwFGGddh4l7cA3GxAU40IHEmROj
-        U0bOdCBGfOALEcr/X84lBdrChQZj0i85/L3ntvc/7X1QyMmZR71eDyGxgb4WNHvCMLS0seM4M8bTgXsf
-        oNlAc8/zJoyr1Sp1DO+RnO7/VR2rgoGdcrkca7oWWABFwhhMxRnkB9ET7TJn23bXdd1vtJOhuZ53CSNK
-        pdIzTF5wSSM+/4X4oFqWlW5OUIBLYSz5+Tv8wbPNSqVyj5fZU9lF4RcoFoszb4+8jeCuuPV9/1TScTyJ
-        sogGFjGL2JFUMkEQHFJZAEVCwZyeFgzKz5nGuACC+09QxJ00U1GG0QJ4rc31dsTbc4GlwfmfpoUx9uU6
-        HiyQEHNGU7tWqykztqkMg/XwJhrlEcHFmI6Y8C3bWMmmxppP0SiviPk7IAtQOM2mYVE8D/6MLiKbY9oU
-        LL5LTCP/LfujzPrpo4grFDGxPRcGC/IIA5xL0wg8d4Pt20MMME5D0mbgwV0M0MFg6qBaBNx7DeEOeuep
-        Cm2PepYEK3sbfzLH0kwF5hc0hHL7DlY21+Cg2oCoswGxxVwCBwgaN0fNDMGgmxAWwFMtGtxm/NQeNCcn
-        5z9SKAwByP7Tbtg3ptsAAAAASUVORK5CYII=
-</value>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>793, 24</value>
+  </data>
+  <data name="fileToolStripMenuItem.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="modeToolStripMenuItem.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="settingsToolStripMenuItem.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="StartTimer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Theme.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="Theme.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -157,13 +175,27 @@
         ChnAswN/Ax6DivnHnCiVPgECe+KKYiOGzgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>470, 17</value>
-  </metadata>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>118, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>84</value>
-  </metadata>
+  <data name="Reset.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAdhJREFUWEftlUtOwlAUhukjEBIGpCtgCagb6NwFGGddh4l7cA3GxAU40IHEmROj
+        U0bOdCBGfOALEcr/X84lBdrChQZj0i85/L3ntvc/7X1QyMmZR71eDyGxgb4WNHvCMLS0seM4M8bTgXsf
+        oNlAc8/zJoyr1Sp1DO+RnO7/VR2rgoGdcrkca7oWWABFwhhMxRnkB9ET7TJn23bXdd1vtJOhuZ53CSNK
+        pdIzTF5wSSM+/4X4oFqWlW5OUIBLYSz5+Tv8wbPNSqVyj5fZU9lF4RcoFoszb4+8jeCuuPV9/1TScTyJ
+        sogGFjGL2JFUMkEQHFJZAEVCwZyeFgzKz5nGuACC+09QxJ00U1GG0QJ4rc31dsTbc4GlwfmfpoUx9uU6
+        HiyQEHNGU7tWqykztqkMg/XwJhrlEcHFmI6Y8C3bWMmmxppP0SiviPk7IAtQOM2mYVE8D/6MLiKbY9oU
+        LL5LTCP/LfujzPrpo4grFDGxPRcGC/IIA5xL0wg8d4Pt20MMME5D0mbgwV0M0MFg6qBaBNx7DeEOeuep
+        Cm2PepYEK3sbfzLH0kwF5hc0hHL7DlY21+Cg2oCoswGxxVwCBwgaN0fNDMGgmxAWwFMtGtxm/NQeNCcn
+        5z9SKAwByP7Tbtg3ptsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
 </root>
