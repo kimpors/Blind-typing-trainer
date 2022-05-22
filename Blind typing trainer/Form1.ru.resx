@@ -117,51 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="openFileDialog1.Filter" xml:space="preserve">
+    <value>Текст| *.txt;*.rtf</value>
+  </data>
   <data name="Start.Text" xml:space="preserve">
-    <value>Начать</value>
+    <value>Старт</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Время:</value>
+  <data name="Time.Text" xml:space="preserve">
+    <value>Время: 00:00:00</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Скорость:</value>
+  <data name="Speed.Text" xml:space="preserve">
+    <value>Скорость: 0WP</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="openToolStripMenuItem.Text" xml:space="preserve">
-    <value>Открыть</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Файл</value>
-  </data>
-  <data name="freeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 22</value>
-  </data>
-  <data name="freeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Свободный</value>
-  </data>
-  <data name="raceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 22</value>
-  </data>
-  <data name="raceToolStripMenuItem.Text" xml:space="preserve">
-    <value>Гонка</value>
-  </data>
-  <data name="modeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Режым</value>
-  </data>
-  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Настройки</value>
-  </data>
-  <data name="statisticToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="statisticToolStripMenuItem.Text" xml:space="preserve">
-    <value>Статистика</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 24</value>
+  <data name="Reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAdhJREFUWEftlUtOwlAUhukjEBIGpCtgCagb6NwFGGddh4l7cA3GxAU40IHEmROj
+        U0bOdCBGfOALEcr/X84lBdrChQZj0i85/L3ntvc/7X1QyMmZR71eDyGxgb4WNHvCMLS0seM4M8bTgXsf
+        oNlAc8/zJoyr1Sp1DO+RnO7/VR2rgoGdcrkca7oWWABFwhhMxRnkB9ET7TJn23bXdd1vtJOhuZ53CSNK
+        pdIzTF5wSSM+/4X4oFqWlW5OUIBLYSz5+Tv8wbPNSqVyj5fZU9lF4RcoFoszb4+8jeCuuPV9/1TScTyJ
+        sogGFjGL2JFUMkEQHFJZAEVCwZyeFgzKz5nGuACC+09QxJ00U1GG0QJ4rc31dsTbc4GlwfmfpoUx9uU6
+        HiyQEHNGU7tWqykztqkMg/XwJhrlEcHFmI6Y8C3bWMmmxppP0SiviPk7IAtQOM2mYVE8D/6MLiKbY9oU
+        LL5LTCP/LfujzPrpo4grFDGxPRcGC/IIA5xL0wg8d4Pt20MMME5D0mbgwV0M0MFg6qBaBNx7DeEOeuep
+        Cm2PepYEK3sbfzLH0kwF5hc0hHL7DlY21+Cg2oCoswGxxVwCBwgaN0fNDMGgmxAWwFMtGtxm/NQeNCcn
+        5z9SKAwByP7Tbtg3ptsAAAAASUVORK5CYII=
+</value>
   </data>
   <data name="Theme.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -179,18 +160,49 @@
         ChnAswN/Ax6DivnHnCiVPgECe+KKYiOGzgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAdhJREFUWEftlUtOwlAUhukjEBIGpCtgCagb6NwFGGddh4l7cA3GxAU40IHEmROj
-        U0bOdCBGfOALEcr/X84lBdrChQZj0i85/L3ntvc/7X1QyMmZR71eDyGxgb4WNHvCMLS0seM4M8bTgXsf
-        oNlAc8/zJoyr1Sp1DO+RnO7/VR2rgoGdcrkca7oWWABFwhhMxRnkB9ET7TJn23bXdd1vtJOhuZ53CSNK
-        pdIzTF5wSSM+/4X4oFqWlW5OUIBLYSz5+Tv8wbPNSqVyj5fZU9lF4RcoFoszb4+8jeCuuPV9/1TScTyJ
-        sogGFjGL2JFUMkEQHFJZAEVCwZyeFgzKz5nGuACC+09QxJ00U1GG0QJ4rc31dsTbc4GlwfmfpoUx9uU6
-        HiyQEHNGU7tWqykztqkMg/XwJhrlEcHFmI6Y8C3bWMmmxppP0SiviPk7IAtQOM2mYVE8D/6MLiKbY9oU
-        LL5LTCP/LfujzPrpo4grFDGxPRcGC/IIA5xL0wg8d4Pt20MMME5D0mbgwV0M0MFg6qBaBNx7DeEOeuep
-        Cm2PepYEK3sbfzLH0kwF5hc0hHL7DlY21+Cg2oCoswGxxVwCBwgaN0fNDMGgmxAWwFMtGtxm/NQeNCcn
-        5z9SKAwByP7Tbtg3ptsAAAAASUVORK5CYII=
-</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 21</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Все время тренировок: </value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Средняя скорость: </value>
+  </data>
+  <data name="openToolStripMenuItem.Text" xml:space="preserve">
+    <value>Открыть</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 22</value>
+  </data>
+  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="ukraineToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 22</value>
+  </data>
+  <data name="ukraineToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ukranian</value>
+  </data>
+  <data name="russiaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 22</value>
+  </data>
+  <data name="russiaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Russian</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="themeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="infoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Информация</value>
   </data>
 </root>

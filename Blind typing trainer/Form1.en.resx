@@ -117,31 +117,48 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TypingField.ToolTip" xml:space="preserve">
-    <value />
+  <data name="openFileDialog1.Filter" xml:space="preserve">
+    <value>Text| *.txt;*.rtf</value>
+  </data>
+  <data name="Start.Text" xml:space="preserve">
+    <value>Start</value>
   </data>
   <data name="Start.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Time.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Speed.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="menuStrip1.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="StartTimer.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="Time.Text" xml:space="preserve">
+    <value>Time: 00:00:00</value>
+  </data>
+  <data name="Time.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Speed.Text" xml:space="preserve">
+    <value>Speed: 0WP</value>
+  </data>
+  <data name="Speed.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAdhJREFUWEftlUtOwlAUhukjEBIGpCtgCagb6NwFGGddh4l7cA3GxAU40IHEmROj
+        U0bOdCBGfOALEcr/X84lBdrChQZj0i85/L3ntvc/7X1QyMmZR71eDyGxgb4WNHvCMLS0seM4M8bTgXsf
+        oNlAc8/zJoyr1Sp1DO+RnO7/VR2rgoGdcrkca7oWWABFwhhMxRnkB9ET7TJn23bXdd1vtJOhuZ53CSNK
+        pdIzTF5wSSM+/4X4oFqWlW5OUIBLYSz5+Tv8wbPNSqVyj5fZU9lF4RcoFoszb4+8jeCuuPV9/1TScTyJ
+        sogGFjGL2JFUMkEQHFJZAEVCwZyeFgzKz5nGuACC+09QxJ00U1GG0QJ4rc31dsTbc4GlwfmfpoUx9uU6
+        HiyQEHNGU7tWqykztqkMg/XwJhrlEcHFmI6Y8C3bWMmmxppP0SiviPk7IAtQOM2mYVE8D/6MLiKbY9oU
+        LL5LTCP/LfujzPrpo4grFDGxPRcGC/IIA5xL0wg8d4Pt20MMME5D0mbgwV0M0MFg6qBaBNx7DeEOeuep
+        Cm2PepYEK3sbfzLH0kwF5hc0hHL7DlY21+Cg2oCoswGxxVwCBwgaN0fNDMGgmxAWwFMtGtxm/NQeNCcn
+        5z9SKAwByP7Tbtg3ptsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="Reset.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Theme.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -161,24 +178,58 @@
   <data name="Theme.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="Reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAdhJREFUWEftlUtOwlAUhukjEBIGpCtgCagb6NwFGGddh4l7cA3GxAU40IHEmROj
-        U0bOdCBGfOALEcr/X84lBdrChQZj0i85/L3ntvc/7X1QyMmZR71eDyGxgb4WNHvCMLS0seM4M8bTgXsf
-        oNlAc8/zJoyr1Sp1DO+RnO7/VR2rgoGdcrkca7oWWABFwhhMxRnkB9ET7TJn23bXdd1vtJOhuZ53CSNK
-        pdIzTF5wSSM+/4X4oFqWlW5OUIBLYSz5+Tv8wbPNSqVyj5fZU9lF4RcoFoszb4+8jeCuuPV9/1TScTyJ
-        sogGFjGL2JFUMkEQHFJZAEVCwZyeFgzKz5nGuACC+09QxJ00U1GG0QJ4rc31dsTbc4GlwfmfpoUx9uU6
-        HiyQEHNGU7tWqykztqkMg/XwJhrlEcHFmI6Y8C3bWMmmxppP0SiviPk7IAtQOM2mYVE8D/6MLiKbY9oU
-        LL5LTCP/LfujzPrpo4grFDGxPRcGC/IIA5xL0wg8d4Pt20MMME5D0mbgwV0M0MFg6qBaBNx7DeEOeuep
-        Cm2PepYEK3sbfzLH0kwF5hc0hHL7DlY21+Cg2oCoswGxxVwCBwgaN0fNDMGgmxAWwFMtGtxm/NQeNCcn
-        5z9SKAwByP7Tbtg3ptsAAAAASUVORK5CYII=
-</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>All time of training: </value>
   </data>
-  <data name="Reset.ToolTip" xml:space="preserve">
+  <data name="label2.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="comboBox1.ToolTip" xml:space="preserve">
+  <data name="label1.Text" xml:space="preserve">
+    <value>Average speed: </value>
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chart1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="openToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="ukraineToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ukranian</value>
+  </data>
+  <data name="russiaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Russian</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="themeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="infoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="menuStrip1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="nsButton1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypingField.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="$this.ToolTip" xml:space="preserve">

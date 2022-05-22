@@ -7,9 +7,6 @@ namespace Blind_typing_trainer
 {
     public class RichLabel : RichTextBox
     {
-        const int WM_SETFOCUS = 0x0007;
-        const int WM_KILLFOCUS = 0x0008;
-
         [DefaultValue(true)]
         public bool Selectable { get; set; }
 
@@ -33,8 +30,8 @@ namespace Blind_typing_trainer
                     return;
             }
 
-            if (m.Msg == WM_SETFOCUS && !Selectable)
-                m.Msg = WM_KILLFOCUS;
+            if (m.Msg == 0x0007/* WM_SETFOCUS*/ && !Selectable)
+                m.Msg = 0x0008/*WM_KILLFOCUS*/;
 
             base.WndProc(ref m);
             HideCaret(Handle);
