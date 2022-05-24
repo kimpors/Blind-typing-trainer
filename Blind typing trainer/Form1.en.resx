@@ -123,23 +123,11 @@
   <data name="Start.Text" xml:space="preserve">
     <value>Start</value>
   </data>
-  <data name="Start.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="StartTimer.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="Time.Text" xml:space="preserve">
     <value>Time: 00:00:00</value>
   </data>
-  <data name="Time.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="Speed.Text" xml:space="preserve">
     <value>Speed: 0WP</value>
-  </data>
-  <data name="Speed.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -155,9 +143,6 @@
         Cm2PepYEK3sbfzLH0kwF5hc0hHL7DlY21+Cg2oCoswGxxVwCBwgaN0fNDMGgmxAWwFMtGtxm/NQeNCcn
         5z9SKAwByP7Tbtg3ptsAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="Reset.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="Theme.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -175,32 +160,17 @@
         ChnAswN/Ax6DivnHnCiVPgECe+KKYiOGzgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Theme.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="label2.Text" xml:space="preserve">
     <value>All time of training: </value>
-  </data>
-  <data name="label2.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Average speed: </value>
   </data>
-  <data name="label1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chart1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panel1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="openToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open</value>
+    <value>File</value>
   </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
+    <value>Text</value>
   </data>
   <data name="englishToolStripMenuItem.Text" xml:space="preserve">
     <value>English</value>
@@ -222,17 +192,5 @@
   </data>
   <data name="infoToolStripMenuItem.Text" xml:space="preserve">
     <value>Info</value>
-  </data>
-  <data name="menuStrip1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="nsButton1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TypingField.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
   </data>
 </root>

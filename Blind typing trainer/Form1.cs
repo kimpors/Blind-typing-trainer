@@ -14,6 +14,8 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Globalization;
 using System.Configuration;
+using NLipsum.Core;
+using System.Runtime.Serialization.Formatters.Binary;
 
 
 namespace Blind_typing_trainer
@@ -21,134 +23,118 @@ namespace Blind_typing_trainer
     public partial class Form1 : Form
     {
         private int symbolCount, mistake, mistakePlace;
+        private double raceResult;
         private string allText;
-        private bool isLight;
         private TimeSpan timer;
-        private FabricTheme currTheme;
-        private Rectangle origFormSize, origTypingFieldRec;
+        private User user;
+        private Theme currTheme;
+        private ILanguage currLanguage;
+        private Rectangle origFormSize;
         private float origTypingFieldFontSize;
         private const int NOTHING = -1;
-
-        private string usual;
-        private string start, stop;
-        private string speed, time;
-        private string shortTextInfo;
-        private string infoStrip;
-        private string averageSpeed, allTimeTraining;
-
-
-
 
         public Form1()
         {
             InitializeComponent();
-            isLight = true;
-            currTheme = new FabricLight();
-            SetTheme();
 
-            
+
+            using (Stream file = File.Open("User.dat", FileMode.OpenOrCreate))
+            {
+                if (file.Length > 0)
+                {
+                    user = (User)new BinaryFormatter().Deserialize(file);
+                }
+            }
+
+            if (user == null)
+            {
+                user = new User(new SwtichTheme().SwitchLight(),
+                    new SwitchLanguage().SwitchEng(),
+                    new TimeSpan(0, 0, 0), new List<float>() { 0 });
+            }
+            currLanguage = user.currLanguage;
+            allText = TypingField.Text = currLanguage.Standart;
+            currTheme = user.currTheme;
+            SetTheme();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            string currLanguage = ConfigurationManager.AppSettings["language"];
-            if (currLanguage == "en-US")
-            {
-                usual = "Text here";
-                start = "Start";
-                stop = "Stop";
-                speed = "Speed:";
-                time = "Time:";
-                shortTextInfo = "Super short text (al least 1000 letters)";
-                infoStrip = "F5 - start\nQ - Open panel";
-                allTimeTraining = "All time of training:";
-                averageSpeed = "Average Speed:";
-            }
-            else if(currLanguage == "uk-UA")
-            {
-                usual = "Text here";
-                start = "Старт";
-                stop = "Стоп";
-                speed = "Швидкість:";
-                time = "Час:";
-                shortTextInfo = "Дуже короткий текст(хоча би 1000 літер)";
-                infoStrip = "F5 - Старт\nQ - Відкрити панель";
-                allTimeTraining = "Весь час тренувань:";
-                averageSpeed = "Середня швидкість:";
-            }
+            string currentLanguage = ConfigurationManager.AppSettings["language"];
+
+            if (currentLanguage == "en-US")
+                currLanguage = new SwitchLanguage().SwitchEng();
+            else if (currentLanguage == "uk-UA")
+                currLanguage = new SwitchLanguage().SwitchUkr();
             else
-            {
-                usual = "Text here";
-                start = "Старт";
-                stop = "Стоп";
-                speed = "Скорость:";
-                time = "Время:";
-                shortTextInfo = "Очень короткий текст(хотя бы 1000 букв)";
-                infoStrip = "F5 - Старт\nQ - Открыть панель";
-                allTimeTraining = "Все время тренировок:";
-                averageSpeed = "Средняя скорость:";
-            }
+                currLanguage = new SwitchLanguage().SwitchRus();
 
-
-            allText = TypingField.Text = usual;
-            aveSpeed.Text = averageSpeed;
-            allTime.Text = allTimeTraining;
+            aveSpeed.Text = currLanguage.AverageSpeed + user.allRuns.Average();
+            allTime.Text = currLanguage.AllTimeOfTraining + user.trainingTime.ToString();
 
             symbolCount = mistake = 0;
             mistakePlace = NOTHING;
 
 
-
             timer = new TimeSpan(0, 0, 0);
             origFormSize = new Rectangle(Location, Size);
-            origTypingFieldRec = new Rectangle(TypingField.Location, TypingField.Size);
             origTypingFieldFontSize = TypingField.Font.Size;
         }
 
         private void SetTheme()
         {
-            var theme = currTheme.CreateTheme();
+            menuStrip1.Renderer = new ToolStripProfessionalRenderer(currTheme.CreateColorStrip());
 
-            menuStrip1.Renderer = new ToolStripProfessionalRenderer(theme.CreateColorStrip());
+            menuStrip1.BackColor = currTheme.darkBackColor;
+            menuStrip1.ForeColor = currTheme.foreColor;
 
-            menuStrip1.BackColor = theme.darkBackColor;
-            menuStrip1.ForeColor = theme.foreColor;
+            foreach (ToolStripMenuItem st in menuStrip1.Items)
+            {
+                st.ForeColor = currTheme.foreColor;
+                foreach (var dt in st.DropDownItems)
+                {
+                    ((ToolStripMenuItem)dt).ForeColor = currTheme.foreColor;
+                }
+            }
 
-            openToolStripMenuItem.ForeColor = theme.foreColor;
-            languageToolStripMenuItem.ForeColor = theme.foreColor;
-            themeToolStripMenuItem.ForeColor = theme.foreColor;
-            englishToolStripMenuItem.ForeColor = theme.foreColor;
-            russiaToolStripMenuItem.ForeColor = theme.foreColor;
-            ukraineToolStripMenuItem.ForeColor = theme.foreColor;
 
+            BackColor = currTheme.darkBackColor;
 
-            BackColor = theme.darkBackColor;
-
-            TypingField.BackColor = theme.backColor;
-            TypingField.ForeColor = theme.foreColor;
+            TypingField.BackColor = currTheme.backColor;
+            TypingField.ForeColor = currTheme.foreColor;
 
             TypingField.SelectAll();
-            TypingField.SelectionBackColor = theme.backColor;
-            TypingField.SelectionColor = theme.foreColor;
+            TypingField.SelectionBackColor = currTheme.backColor;
+            TypingField.SelectionColor = currTheme.foreColor;
 
-            Start.BackColor = theme.backColor;
-            Start.ForeColor = theme.foreColor;
+            Start.BackColor = currTheme.backColor;
+            Start.ForeColor = currTheme.foreColor;
 
-            Time.ForeColor = theme.foreColor;
-            Speed.ForeColor = theme.foreColor;
-            aveSpeed.ForeColor = theme.foreColor;
-            allTime.ForeColor = theme.foreColor;
+            Time.ForeColor = currTheme.foreColor;
+            Speed.ForeColor = currTheme.foreColor;
+            aveSpeed.ForeColor = currTheme.foreColor;
+            allTime.ForeColor = currTheme.foreColor;
 
 
-            StartTimer.BackColor = theme.backColor;
-            StartTimer.ForeColor = theme.foreColor;
+            StartTimer.BackColor = currTheme.backColor;
+            StartTimer.ForeColor = currTheme.foreColor;
         }
         private void button1_Click(object sender, EventArgs e)
         {
             panel1.Visible = !panel1.Visible;
+
+            aveSpeed.Text = currLanguage.AverageSpeed + user.allRuns.Average().ToString(".00");
+            allTime.Text = currLanguage.AllTimeOfTraining + user.trainingTime;
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
-            resizeFont(origTypingFieldRec, TypingField, origTypingFieldFontSize);
+            if (WindowState != FormWindowState.Minimized)
+            {
+                float xRatio = (float)this.ClientRectangle.Width / (float)origFormSize.Width;
+                float yRatio = (float)this.ClientRectangle.Height / (float)origFormSize.Height;
+
+                float newFontSize = xRatio >= yRatio ? origTypingFieldFontSize * yRatio : origTypingFieldFontSize * xRatio;
+                TypingField.Font = new Font(TypingField.Font.FontFamily, newFontSize);
+            }
         }
         private void PaintLetters()
         {
@@ -197,23 +183,26 @@ namespace Blind_typing_trainer
                 if (symbolCount == TypingField.Text.Length && mistakePlace == NOTHING)
                 {
                     timerTick.Enabled = false;
-                    timer = new TimeSpan(0, 0, 0);
                     StartTimer.Text = "3";
-                    Start.Text = start;
+                    Start.Text = currLanguage.Start;
+                    user.trainingTime = user.trainingTime.Add(timer);
+                    user.AddRun((float)raceResult);
+                    timer = new TimeSpan(0, 0, 0);
                     return;
                 }
             }
         }
         private void Start_Click(object sender, EventArgs e)
         {
+            Reset_Click(Reset, null);
             panel1.Visible = false;
             timerTick.Enabled = !timerTick.Enabled;
 
             StartTimer.Text = "3";
-            StartTimer.Visible = Start.Text == start ? true : false;
-            Start.Text = timerTick.Enabled && symbolCount != TypingField.Text.Length ? stop : start;
+            StartTimer.Visible = Start.Text == currLanguage.Start ? true : false;
+            Start.Text = timerTick.Enabled && symbolCount != TypingField.Text.Length ? currLanguage.Stop : currLanguage.Start;
 
-            if (Start.Text == stop && TypingField.Text != usual)
+            if (Start.Text == currLanguage.Stop && allText != currLanguage.Standart)
             {
                 TypingField.Text = Regex.Match(allText.Substring(new Random()
                     .Next(1, allText.Length - 1000)).Replace("  ", ""), @"[A-Za-z]+.{100,1000}\.").Value;
@@ -226,9 +215,10 @@ namespace Blind_typing_trainer
                 StartTimer.Visible = false;
 
                 timer = timer.Add(new TimeSpan(0, 0, 1));
-                Time.Text = $"{time} " + timer.ToString();
+                Time.Text = $"{currLanguage.Time} " + timer.ToString();
 
-                Speed.Text = $"{speed} " + ((int)((symbolCount + mistake) / timer.TotalMinutes / 5)).ToString() + "WP";
+                raceResult = (symbolCount + mistake) / timer.TotalMinutes / 5;
+                Speed.Text = $"{currLanguage.Speed} " + ((int)raceResult).ToString() + "WP";
             }
             else
             {
@@ -237,23 +227,22 @@ namespace Blind_typing_trainer
         }
         private void Theme_Click(object sender, EventArgs e)
         {
-            isLight = !isLight;
-
-            if (isLight)
-                currTheme = new FabricLight();
+            if (currTheme.GetType() == new SwtichTheme().SwitchDark().GetType()) 
+                currTheme = new SwtichTheme().SwitchLight();
             else
-                currTheme = new FabricDark();
+                currTheme = new SwtichTheme().SwitchDark();
 
             SetTheme();
             PaintLetters();
         }
         private void Reset_Click(object sender, EventArgs e)
         {
-            if (Start.Text == start)
+            if (Start.Text == currLanguage.Start)
             {
-                symbolCount = mistake = mistakePlace = 0;
-                Speed.Text = $"{speed} 0WP";
-                Time.Text = $"{time} 00:00:00";
+                symbolCount = mistake = 0;
+                mistakePlace = NOTHING;
+                Speed.Text = $"{currLanguage.Speed} 0WP";
+                Time.Text = $"{currLanguage.Time} 00:00:00";
                 SetTheme();
             }
         }
@@ -264,7 +253,6 @@ namespace Blind_typing_trainer
             else if (e.KeyData == Keys.Q && Start.Text == "Start")
                 button1_Click(nsButton1, null);
         }
-
         private void ChangeLanguage(string value)
         {
             var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
@@ -278,69 +266,40 @@ namespace Blind_typing_trainer
 
         private void infoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(infoStrip, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(currLanguage.InfoHotKeys, currLanguage.Info, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChangeLanguage("en-US");
-
-            usual = "Text here";
-            start = "Start";
-            stop = "Stop";
-            speed = "Speed:";
-            time = "Time:";
-            shortTextInfo = "Super short text (al least 1000 letters)";
-            infoStrip = "F5 - start\nQ - open panel";
-            allTimeTraining = "All time of training:";
-            averageSpeed = "Average Speed:";
-
-
+            currLanguage = new SwitchLanguage().SwitchEng();
             Application.Restart();
-
         }
         private void ukraineToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChangeLanguage("uk-UA");
-
-            usual = "Text here";
-            start = "Старт";
-            stop = "Стоп";
-            speed = "Швидкість:";
-            time = "Час:";
-            shortTextInfo = "Дуже короткий текст(хоча би 1000 літер)";
-            infoStrip = "F5 - Старт\nQ - Відкрити панель";
-            allTimeTraining = "Весь час тренувань:";
-            averageSpeed = "Середня швидкість:";
-
+            currLanguage = new SwitchLanguage().SwitchUkr();
             Application.Restart();
         }
         private void russiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChangeLanguage("ru-RU");
-
-            usual = "Text here";
-            start = "Старт";
-            stop = "Стоп";
-            speed = "Скорость:";
-            time = "Время:";
-            shortTextInfo = "Очень короткий текст(хотя бы 1000 букв)";
-            infoStrip = "F5 - Старт\nQ - Открыть панель";
-            allTimeTraining = "Все время тренировок:";
-            averageSpeed = "Средняя скорость:";
-
+            currLanguage = new SwitchLanguage().SwitchRus();
             Application.Restart();
         }
-
-        private void resizeFont(Rectangle r, Control c, float origFontSize)
+        private void loremIpsumGenerateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (WindowState != FormWindowState.Minimized)
-            {
-                float xRatio = (float)this.ClientRectangle.Width / (float)origFormSize.Width;
-                float yRatio = (float)this.ClientRectangle.Height / (float)origFormSize.Height;
+            TypingField.Text = string.Join("", new LipsumGenerator().GenerateSentences(new Random().Next(5, 13)));
+        }
 
-                float newFontSize = xRatio >= yRatio ? origFontSize * yRatio : origFontSize * xRatio;
-                c.Font = new Font(c.Font.FontFamily, newFontSize);
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            user.currLanguage = currLanguage;
+            user.currTheme = currTheme;
+
+            using (Stream file = File.Open("User.dat", FileMode.Open))
+            {
+                new BinaryFormatter().Serialize(file, user);
             }
         }
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -362,8 +321,8 @@ namespace Blind_typing_trainer
 
                 if (allText.Length < 1000)
                 {
-                    MessageBox.Show(shortTextInfo, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    allText = usual;
+                    MessageBox.Show(currLanguage.ShortTextInfo, currLanguage.Info, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    allText = currLanguage.Standart;
                 }
 
                 Reset_Click(Reset, null);

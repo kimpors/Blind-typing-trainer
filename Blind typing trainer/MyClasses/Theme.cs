@@ -1,8 +1,10 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using System;
 
 namespace Blind_typing_trainer
 {
+    [Serializable]
     public abstract class Theme
     {
         public virtual Color backColor { get; }
@@ -35,7 +37,7 @@ namespace Blind_typing_trainer
             public override Color MenuItemBorder { get { return back; } }
         }
     }
-
+    [Serializable]
     public sealed class Light : Theme
     {
         public override Color backColor => Color.FromArgb(202, 207, 255);
@@ -43,7 +45,7 @@ namespace Blind_typing_trainer
         public override Color darkBackColor => Color.FromArgb(159, 167, 255);
 
     }
-
+    [Serializable]
     public sealed class Dark : Theme
     {
         public override Color backColor => Color.FromArgb(45, 48, 78);
@@ -51,24 +53,23 @@ namespace Blind_typing_trainer
         public override Color darkBackColor => Color.FromArgb(77, 80, 112);
     }
 
-    public abstract class FabricTheme
+
+    public interface ISwtichTheme
     {
-        public abstract Theme CreateTheme();
+        Theme SwitchDark();
+        Theme SwitchLight();
     }
 
-    public sealed class FabricLight : FabricTheme
+    class SwtichTheme : ISwtichTheme
     {
-        public override Theme CreateTheme()
-        {
-            return new Light();
-        }
-    }
-
-    public sealed class FabricDark : FabricTheme
-    {
-        public override Theme CreateTheme()
+        public Theme SwitchDark()
         {
             return new Dark();
+        }
+
+        public Theme SwitchLight()
+        {
+            return new Light();
         }
     }
 }

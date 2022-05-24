@@ -40,12 +40,15 @@
             this.Time = new System.Windows.Forms.Label();
             this.Speed = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Reset = new Blind_typing_trainer.NSButton();
+            this.Theme = new Blind_typing_trainer.NSButton();
             this.allTime = new System.Windows.Forms.Label();
             this.aveSpeed = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loremIpsumGenerateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,8 +58,6 @@
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.nsButton1 = new Blind_typing_trainer.NSButton();
-            this.Reset = new Blind_typing_trainer.NSButton();
-            this.Theme = new Blind_typing_trainer.NSButton();
             this.TypingField = new Blind_typing_trainer.RichLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -114,6 +115,22 @@
             this.panel1.Controls.Add(this.Speed);
             this.panel1.Name = "panel1";
             // 
+            // Reset
+            // 
+            this.Reset.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.Reset, "Reset");
+            this.Reset.Name = "Reset";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            // 
+            // Theme
+            // 
+            this.Theme.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.Theme, "Theme");
+            this.Theme.Name = "Theme";
+            this.Theme.UseVisualStyleBackColor = true;
+            this.Theme.Click += new System.EventHandler(this.Theme_Click);
+            // 
             // allTime
             // 
             resources.ApplyResources(this.allTime, "allTime");
@@ -152,7 +169,8 @@
             // 
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem});
+            this.openToolStripMenuItem,
+            this.loremIpsumGenerateToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             // 
             // openToolStripMenuItem
@@ -160,6 +178,12 @@
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // loremIpsumGenerateToolStripMenuItem
+            // 
+            this.loremIpsumGenerateToolStripMenuItem.Name = "loremIpsumGenerateToolStripMenuItem";
+            resources.ApplyResources(this.loremIpsumGenerateToolStripMenuItem, "loremIpsumGenerateToolStripMenuItem");
+            this.loremIpsumGenerateToolStripMenuItem.Click += new System.EventHandler(this.loremIpsumGenerateToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
@@ -215,22 +239,6 @@
             this.nsButton1.UseVisualStyleBackColor = true;
             this.nsButton1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Reset
-            // 
-            this.Reset.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.Reset, "Reset");
-            this.Reset.Name = "Reset";
-            this.Reset.UseVisualStyleBackColor = true;
-            this.Reset.Click += new System.EventHandler(this.Reset_Click);
-            // 
-            // Theme
-            // 
-            this.Theme.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.Theme, "Theme");
-            this.Theme.Name = "Theme";
-            this.Theme.UseVisualStyleBackColor = true;
-            this.Theme.Click += new System.EventHandler(this.Theme_Click);
-            // 
             // TypingField
             // 
             resources.ApplyResources(this.TypingField, "TypingField");
@@ -257,6 +265,7 @@
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
@@ -298,6 +307,7 @@
         private System.Windows.Forms.ToolStripMenuItem russiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem themeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loremIpsumGenerateToolStripMenuItem;
     }
 }
 
