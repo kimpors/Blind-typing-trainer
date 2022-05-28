@@ -148,7 +148,7 @@
     <value>3, 15</value>
   </data>
   <data name="Start.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 29</value>
+    <value>141, 29</value>
   </data>
   <data name="Start.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -166,7 +166,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;Start.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="StartTimer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -208,7 +208,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;StartTimer.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Time.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -241,7 +241,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;Time.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="Speed.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -274,10 +274,115 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;Speed.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;record.Name" xml:space="preserve">
+    <value>record</value>
+  </data>
+  <data name="&gt;&gt;record.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;record.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;record.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Reset.Name" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="&gt;&gt;Reset.Type" xml:space="preserve">
+    <value>Blind_typing_trainer.NSButton, Blind typing trainer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Reset.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;Reset.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;allTime.Name" xml:space="preserve">
+    <value>allTime</value>
+  </data>
+  <data name="&gt;&gt;allTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;allTime.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;allTime.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;aveSpeed.Name" xml:space="preserve">
+    <value>aveSpeed</value>
+  </data>
+  <data name="&gt;&gt;aveSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aveSpeed.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;aveSpeed.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>538, 22</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 443</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="panel1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="record.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="record.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 14.25pt</value>
+  </data>
+  <data name="record.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="record.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 163</value>
+  </data>
+  <data name="record.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 23</value>
+  </data>
+  <data name="record.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="record.Text" xml:space="preserve">
+    <value>Record:</value>
+  </data>
+  <data name="&gt;&gt;record.Name" xml:space="preserve">
+    <value>record</value>
+  </data>
+  <data name="&gt;&gt;record.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;record.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;record.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="Reset.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -300,7 +405,7 @@
     <value>NoControl</value>
   </data>
   <data name="Reset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 11</value>
+    <value>150, 12</value>
   </data>
   <data name="Reset.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 32</value>
@@ -318,49 +423,6 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;Reset.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Theme.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="Theme.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAltJREFUWEftVstOAkEQZFVADDHEDzBcvGP8AY7e5BP4SO8ePSkH48mTiQE10VWD
-        j/hgrOrpJsMu0QUZvVhJ2z29PVM1PbMupSx6vZ5rNBoOoVir1XJpmr46506k4LcBQXsURCHAOizRR4WB
-        OcuBLWnao8iCnGgi0I1NTRcC6huY94LQtdvtfo6v2+2ea/gt0I3dTqfDoykEEA8oHPO2NZVHsLONrDq2
-        i7uHlWEVWBW2qp5j5ldgudZizSe9S98DCndYjBZhHZdwMRqF4XEhYy3nIhY0m03mZ4MSl42YosJFv4J1
-        smj9VGDyGheZhdjA+h+JwKSqkWsqBy4M45mbLesjAZ97N5+Amnduw2c8uBjM3uEVOx6a7lbuixR7MDdf
-        B7xzWz4jAyEPSfV4RIx2a6LtdgyMZwIWWMpOZo5jJZVXMhRD45ujcYjsuBhAsOadbym8nen4lQw6IDtW
-        PyZE3VA7Mzu4WLYLHNfr9RyxwTqkcX9u8gwmFjFRwOSHxCOsXQi5EMKNO8FdmwiOM5Acnp2h5lEyi4KS
-        PjDW1k8VgJor1H7oeLHAwikILjSe6AJi+dohnCZsoRipJ0Iyi+MKwC5vsNtjHYZkJiwUGA3TyEYQdgiB
-        1zqOh0qlwp9VJDfjpWM34ly+EPh3uw8nF1B/tEgMUS5Jko9arZb6yrjgbrNmu2d3omOEs75lgN1f6uvH
-        O3AA/8x8bLzxDwiPQf7OI8DQTJ5FBUiP8FG6g5f/jPBDOPsQxb+IBMjYarb9lGP+8mUnkL/n+NcAQt4F
-        ChnAswN/Ax6DivnHnCiVPgECe+KKYiOGzgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="Theme.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Theme.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 11</value>
-  </data>
-  <data name="Theme.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 32</value>
-  </data>
-  <data name="Theme.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;Theme.Name" xml:space="preserve">
-    <value>Theme</value>
-  </data>
-  <data name="&gt;&gt;Theme.Type" xml:space="preserve">
-    <value>Blind_typing_trainer.NSButton, Blind typing trainer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;Theme.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;Theme.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="allTime.AutoSize" type="System.Boolean, mscorlib">
@@ -429,11 +491,20 @@
   <data name="&gt;&gt;aveSpeed.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="chart1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="chart1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="chart1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 254</value>
+    <value>0, 0</value>
+  </data>
+  <data name="chart1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="chart1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 172</value>
+    <value>548, 254</value>
   </data>
   <data name="chart1.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -448,34 +519,10 @@
     <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
   </data>
   <data name="&gt;&gt;chart1.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panel2</value>
   </data>
   <data name="&gt;&gt;chart1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>538, 22</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 443</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="panel1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>118, 17</value>
@@ -483,53 +530,29 @@
   <data name="fileToolStripMenuItem.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="openToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="loremIpsumGenerateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="loremIpsumGenerateToolStripMenuItem.Text" xml:space="preserve">
-    <value>Fish Generator</value>
-  </data>
   <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
   </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
     <value>Text</value>
   </data>
-  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="ukraineToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="ukraineToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ukranian</value>
-  </data>
-  <data name="russiaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="russiaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Russian</value>
-  </data>
   <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
+    <value>147, 22</value>
   </data>
   <data name="languageToolStripMenuItem.Text" xml:space="preserve">
     <value>Language</value>
   </data>
   <data name="themeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
+    <value>147, 22</value>
   </data>
   <data name="themeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Theme</value>
+    <value>Theme Create</value>
+  </data>
+  <data name="themeSelectToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="themeSelectToolStripMenuItem.Text" xml:space="preserve">
+    <value>Theme Select</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 20</value>
@@ -565,11 +588,68 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
+  </data>
+  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 22</value>
+  </data>
+  <data name="openToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="loremIpsumGenerateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 22</value>
+  </data>
+  <data name="loremIpsumGenerateToolStripMenuItem.Text" xml:space="preserve">
+    <value>Fish Generator</value>
+  </data>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="ukraineToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="ukraineToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ukranian</value>
+  </data>
+  <data name="russiaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="russiaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Russian</value>
   </data>
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>470, 17</value>
   </metadata>
+  <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 211</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>548, 254</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="panel2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="nsButton1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -601,7 +681,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;nsButton1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="TypingField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -640,7 +720,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TypingField.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -730,6 +810,12 @@
     <value>themeToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;themeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;themeSelectToolStripMenuItem.Name" xml:space="preserve">
+    <value>themeSelectToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;themeSelectToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;infoToolStripMenuItem.Name" xml:space="preserve">

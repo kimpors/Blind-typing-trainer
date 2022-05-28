@@ -197,12 +197,18 @@
     <value>Язык</value>
   </data>
   <data name="themeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Тема</value>
+    <value>Создать тему</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
     <value>Настройки</value>
   </data>
   <data name="infoToolStripMenuItem.Text" xml:space="preserve">
     <value>Информация</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="themeSelectToolStripMenuItem.Text" xml:space="preserve">
+    <value>Выбрать тему</value>
   </data>
 </root>

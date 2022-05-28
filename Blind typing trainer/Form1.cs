@@ -17,7 +17,6 @@ using System.Configuration;
 using NLipsum.Core;
 using System.Runtime.Serialization.Formatters.Binary;
 
-
 namespace Blind_typing_trainer
 {
     public partial class Form1 : Form
@@ -37,7 +36,6 @@ namespace Blind_typing_trainer
         {
             InitializeComponent();
 
-
             using (Stream file = File.Open("User.dat", FileMode.OpenOrCreate))
             {
                 if (file.Length > 0)
@@ -48,13 +46,16 @@ namespace Blind_typing_trainer
 
             if (user == null)
             {
-                user = new User(new SwtichTheme().SwitchLight(),
+                user = new User(new SwitchTheme().SwitchLight(),
                     new SwitchLanguage().SwitchEng(),
-                    new TimeSpan(0, 0, 0), new List<float>() { 0 });
+                    new TimeSpan(0, 0, 0), new List<float>() { 0 },
+                    new List<CustomTheme> {new CustomTheme(new SwitchTheme().SwitchLight(),"Light"),
+                    new CustomTheme(new SwitchTheme().SwitchDark(),"Dark")});
             }
             currLanguage = user.currLanguage;
             allText = TypingField.Text = currLanguage.Standart;
             currTheme = user.currTheme;
+            SelectThemeRender();
             SetTheme();
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -68,12 +69,12 @@ namespace Blind_typing_trainer
             else
                 currLanguage = new SwitchLanguage().SwitchRus();
 
-            aveSpeed.Text = currLanguage.AverageSpeed + user.allRuns.Average();
+            aveSpeed.Text = currLanguage.AverageSpeed + user.allRuns.Average().ToString(".00");
             allTime.Text = currLanguage.AllTimeOfTraining + user.trainingTime.ToString();
+            record.Text = "Record: " + user.allRuns.Max().ToString(".00");
 
             symbolCount = mistake = 0;
             mistakePlace = NOTHING;
-
 
             timer = new TimeSpan(0, 0, 0);
             origFormSize = new Rectangle(Location, Size);
@@ -84,20 +85,38 @@ namespace Blind_typing_trainer
         {
             menuStrip1.Renderer = new ToolStripProfessionalRenderer(currTheme.CreateColorStrip());
 
-            menuStrip1.BackColor = currTheme.darkBackColor;
+            menuStrip1.BackColor = currTheme.secondBackColor;
             menuStrip1.ForeColor = currTheme.foreColor;
 
-            foreach (ToolStripMenuItem st in menuStrip1.Items)
+            nsButton1.ForeColor = currTheme.foreColor;
+
+
+            foreach (ToolStripMenuItem a in menuStrip1.Items)
             {
-                st.ForeColor = currTheme.foreColor;
-                foreach (var dt in st.DropDownItems)
+                a.ForeColor = currTheme.foreColor;
+                foreach (ToolStripMenuItem b in a.DropDownItems)
                 {
-                    ((ToolStripMenuItem)dt).ForeColor = currTheme.foreColor;
+                    b.ForeColor = currTheme.foreColor;
+                    if (b.HasDropDown)
+                    {
+                        foreach (ToolStripMenuItem c in b.DropDownItems)
+                        {
+                            c.ForeColor = currTheme.foreColor;
+                        }
+                    }
                 }
             }
 
+            foreach (ToolStripMenuItem th in themeSelectToolStripMenuItem.DropDownItems)
+            {
+                th.ForeColor = currTheme.foreColor;
+                foreach (ToolStripMenuItem del in th.DropDownItems)
+                {
+                    del.ForeColor = currTheme.foreColor;
+                }
+            }
 
-            BackColor = currTheme.darkBackColor;
+            BackColor = currTheme.secondBackColor;
 
             TypingField.BackColor = currTheme.backColor;
             TypingField.ForeColor = currTheme.foreColor;
@@ -106,24 +125,52 @@ namespace Blind_typing_trainer
             TypingField.SelectionBackColor = currTheme.backColor;
             TypingField.SelectionColor = currTheme.foreColor;
 
-            Start.BackColor = currTheme.backColor;
-            Start.ForeColor = currTheme.foreColor;
 
-            Time.ForeColor = currTheme.foreColor;
-            Speed.ForeColor = currTheme.foreColor;
-            aveSpeed.ForeColor = currTheme.foreColor;
-            allTime.ForeColor = currTheme.foreColor;
+            foreach (var item in panel1.Controls)
+            {
+                if (item is Label)
+                {
+                    ((Label)item).ForeColor = currTheme.foreColor;
+                }
+                else if (item is NSButton)
+                {
+                    ((NSButton)item).ForeColor = currTheme.foreColor;
+                    ((NSButton)item).BackColor = currTheme.secondBackColor;
+                }
+                else if (item is Button)
+                {
+                    ((Button)item).ForeColor = currTheme.foreColor;
+                    ((Button)item).BackColor = currTheme.backColor;
+                }
+            }
 
 
-            StartTimer.BackColor = currTheme.backColor;
-            StartTimer.ForeColor = currTheme.foreColor;
+            chart1.BackColor = currTheme.secondBackColor;
+            chart1.Series[0].Color = currTheme.foreColor;
+
+            chart1.ChartAreas[0].BackColor = currTheme.backColor;
+            chart1.ChartAreas[0].AxisX.MajorGrid.LineColor = currTheme.foreColor;
+            chart1.ChartAreas[0].AxisX.LabelStyle.ForeColor = currTheme.foreColor;
+            chart1.ChartAreas[0].AxisX.LineColor = currTheme.foreColor;
+
+            chart1.ChartAreas[0].AxisY.LineColor = currTheme.foreColor;
+            chart1.ChartAreas[0].AxisY.MajorGrid.LineColor = currTheme.foreColor;
+            chart1.ChartAreas[0].AxisY.LabelStyle.ForeColor = currTheme.foreColor;
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            panel1.Visible = !panel1.Visible;
-
             aveSpeed.Text = currLanguage.AverageSpeed + user.allRuns.Average().ToString(".00");
             allTime.Text = currLanguage.AllTimeOfTraining + user.trainingTime;
+
+            chart1.Series[0].Points.Clear();
+            foreach (var item in user.allRuns)
+            {
+                chart1.Series[0].Points.AddY(item);
+            }
+
+            panel1.Visible = !panel1.Visible;
+            panel2.Visible = panel1.Visible;
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
@@ -186,7 +233,7 @@ namespace Blind_typing_trainer
                     StartTimer.Text = "3";
                     Start.Text = currLanguage.Start;
                     user.trainingTime = user.trainingTime.Add(timer);
-                    user.AddRun((float)raceResult);
+                    user.allRuns.Add((float)raceResult);
                     timer = new TimeSpan(0, 0, 0);
                     return;
                 }
@@ -195,7 +242,7 @@ namespace Blind_typing_trainer
         private void Start_Click(object sender, EventArgs e)
         {
             Reset_Click(Reset, null);
-            panel1.Visible = false;
+            panel1.Visible = panel2.Visible = false;
             timerTick.Enabled = !timerTick.Enabled;
 
             StartTimer.Text = "3";
@@ -225,16 +272,6 @@ namespace Blind_typing_trainer
                 StartTimer.Text = StartTimer.Text != "1" ? (int.Parse(StartTimer.Text) - 1).ToString() : "GO!!!";
             }
         }
-        private void Theme_Click(object sender, EventArgs e)
-        {
-            if (currTheme.GetType() == new SwtichTheme().SwitchDark().GetType()) 
-                currTheme = new SwtichTheme().SwitchLight();
-            else
-                currTheme = new SwtichTheme().SwitchDark();
-
-            SetTheme();
-            PaintLetters();
-        }
         private void Reset_Click(object sender, EventArgs e)
         {
             if (Start.Text == currLanguage.Start)
@@ -263,12 +300,10 @@ namespace Blind_typing_trainer
 
             config.Save(ConfigurationSaveMode.Modified);
         }
-
         private void infoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(currLanguage.InfoHotKeys, currLanguage.Info, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChangeLanguage("en-US");
@@ -290,6 +325,76 @@ namespace Blind_typing_trainer
         private void loremIpsumGenerateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TypingField.Text = string.Join("", new LipsumGenerator().GenerateSentences(new Random().Next(5, 13)));
+        }
+
+        private void SelectThemeRender()
+        {
+            foreach (CustomTheme ct in user.allThemes)
+                themeSelectToolStripMenuItem.DropDownItems.Add(ct.Name);
+
+
+            foreach (ToolStripMenuItem th in themeSelectToolStripMenuItem.DropDownItems)
+            {
+                th.Click += new EventHandler(Th_Click);
+
+                if (th.Text != "Light" && th.Text != "Dark")
+                {
+                    th.DropDownItems.Add("Delete");
+
+                    foreach (ToolStripMenuItem del in th.DropDownItems)
+                    {
+                        del.Click += new EventHandler(Del_Click);
+                    }
+                }
+            }
+
+
+        }
+        private void Del_Click(object sender, EventArgs e)
+        {
+            string name = ((ToolStripMenuItem)sender).OwnerItem.Text;
+
+            foreach (CustomTheme th in user.allThemes)
+            {
+                if (th.Name == name && name != "Light" && name != "Dark")
+                {
+                    user.allThemes.Remove(th);
+                    themeSelectToolStripMenuItem.DropDownItems.Clear();
+                    SelectThemeRender();
+                    SetTheme();
+                    return;
+                }
+            }
+        }
+        private void Th_Click(object sender, EventArgs e)
+        {
+            string name = ((ToolStripMenuItem)sender).Text;
+
+            foreach (CustomTheme th in user.allThemes)
+            {
+                if (name == th.Name)
+                {
+                    currTheme = th;
+                    SetTheme();
+                    return;
+                }
+            }
+        }
+
+        private void themeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThemeForm ft = new ThemeForm(user, currTheme, currLanguage);
+            if (Application.OpenForms["ThemeForm"] == null)
+                ft.Show();
+        }
+        private void themeSelectToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            if (themeSelectToolStripMenuItem.DropDownItems.Count < user.allThemes.Count)
+            {
+                themeSelectToolStripMenuItem.DropDownItems.Clear();
+                SelectThemeRender();
+                SetTheme();
+            }
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)

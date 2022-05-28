@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.timerTick = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -40,8 +40,8 @@
             this.Time = new System.Windows.Forms.Label();
             this.Speed = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.record = new System.Windows.Forms.Label();
             this.Reset = new Blind_typing_trainer.NSButton();
-            this.Theme = new Blind_typing_trainer.NSButton();
             this.allTime = new System.Windows.Forms.Label();
             this.aveSpeed = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -55,13 +55,16 @@
             this.ukraineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.russiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.themeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.themeSelectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.nsButton1 = new Blind_typing_trainer.NSButton();
             this.TypingField = new Blind_typing_trainer.RichLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // timerTick
@@ -105,15 +108,20 @@
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Controls.Add(this.record);
             this.panel1.Controls.Add(this.Reset);
-            this.panel1.Controls.Add(this.Theme);
             this.panel1.Controls.Add(this.allTime);
             this.panel1.Controls.Add(this.aveSpeed);
-            this.panel1.Controls.Add(this.chart1);
             this.panel1.Controls.Add(this.Start);
             this.panel1.Controls.Add(this.Time);
             this.panel1.Controls.Add(this.Speed);
             this.panel1.Name = "panel1";
+            // 
+            // record
+            // 
+            resources.ApplyResources(this.record, "record");
+            this.record.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.record.Name = "record";
             // 
             // Reset
             // 
@@ -122,14 +130,6 @@
             this.Reset.Name = "Reset";
             this.Reset.UseVisualStyleBackColor = true;
             this.Reset.Click += new System.EventHandler(this.Reset_Click);
-            // 
-            // Theme
-            // 
-            this.Theme.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.Theme, "Theme");
-            this.Theme.Name = "Theme";
-            this.Theme.UseVisualStyleBackColor = true;
-            this.Theme.Click += new System.EventHandler(this.Theme_Click);
             // 
             // allTime
             // 
@@ -143,17 +143,36 @@
             // 
             // chart1
             // 
-            chartArea1.BackColor = System.Drawing.Color.White;
-            chartArea1.BorderWidth = 3;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
             resources.ApplyResources(this.chart1, "chart1");
+            this.chart1.BackImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.chart1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            chartArea2.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea2.BackColor = System.Drawing.Color.White;
+            chartArea2.BorderWidth = 0;
+            chartArea2.IsSameFontSizeForAllAxes = true;
+            chartArea2.Name = "ChartArea1";
+            chartArea2.Position.Auto = false;
+            chartArea2.Position.Height = 100F;
+            chartArea2.Position.Width = 100F;
+            this.chart1.ChartAreas.Add(chartArea2);
+            this.chart1.IsSoftShadows = false;
             this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series2.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkHorizontal;
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.IsVisibleInLegend = false;
+            series2.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            series2.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            series2.LabelBorderWidth = 0;
+            series2.Legend = "Legend1";
+            series2.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            series2.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            series2.Name = "Series1";
+            series2.YValuesPerPoint = 2;
+            this.chart1.Series.Add(series2);
+            this.chart1.TabStop = false;
             // 
             // menuStrip1
             // 
@@ -189,7 +208,8 @@
             // 
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.languageToolStripMenuItem,
-            this.themeToolStripMenuItem});
+            this.themeToolStripMenuItem,
+            this.themeSelectToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
             // 
@@ -224,12 +244,25 @@
             // 
             this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
             resources.ApplyResources(this.themeToolStripMenuItem, "themeToolStripMenuItem");
+            this.themeToolStripMenuItem.Click += new System.EventHandler(this.themeToolStripMenuItem_Click);
+            // 
+            // themeSelectToolStripMenuItem
+            // 
+            this.themeSelectToolStripMenuItem.Name = "themeSelectToolStripMenuItem";
+            resources.ApplyResources(this.themeSelectToolStripMenuItem, "themeSelectToolStripMenuItem");
+            this.themeSelectToolStripMenuItem.MouseEnter += new System.EventHandler(this.themeSelectToolStripMenuItem_MouseEnter);
             // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
             resources.ApplyResources(this.infoToolStripMenuItem, "infoToolStripMenuItem");
             this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
+            // 
+            // panel2
+            // 
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Controls.Add(this.chart1);
+            this.panel2.Name = "panel2";
             // 
             // nsButton1
             // 
@@ -256,6 +289,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CausesValidation = false;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.nsButton1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.StartTimer);
@@ -275,6 +309,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,7 +330,6 @@
         private RichLabel TypingField;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private NSButton Reset;
-        private NSButton Theme;
         private NSButton nsButton1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -308,6 +342,9 @@
         private System.Windows.Forms.ToolStripMenuItem themeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loremIpsumGenerateToolStripMenuItem;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label record;
+        private System.Windows.Forms.ToolStripMenuItem themeSelectToolStripMenuItem;
     }
 }
 

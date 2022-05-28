@@ -184,4 +184,10 @@
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
     <value>Текст</value>
   </data>
+  <data name="themeSelectToolStripMenuItem.Text" xml:space="preserve">
+    <value>Обрати тему</value>
+  </data>
+  <data name="themeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Створити тему</value>
+  </data>
 </root>
