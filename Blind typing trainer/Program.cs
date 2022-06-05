@@ -13,7 +13,7 @@ namespace Blind_typing_trainer
         /// </summary>
         [STAThread]
         static void Main()
-        {
+      {
             var currLanguage = ConfigurationManager.AppSettings["language"];
 
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(currLanguage);

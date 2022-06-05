@@ -44,46 +44,25 @@ namespace Blind_typing_trainer
             SetStyle(ControlStyles.OptimizedDoubleBuffer |
                 ControlStyles.AllPaintingInWmPaint |
                 ControlStyles.SupportsTransparentBackColor, true);
+
+            SetStyle(ControlStyles.Selectable, false);
         }
 
         protected override void OnReadOnlyChanged(EventArgs e)
         {
             ReadOnly = true;
         }
-        protected override void OnTextChanged(EventArgs e)
-        {
-            base.OnTextChanged(e);
-            /*            Margins = new Cordinate[TextLength];
-
-                        for (int i = 0; i < TextLength; i++)
-                        {
-                            Margins[i].x = TextRenderer.MeasureText(Text.Substring(0, i), Font).Width;
-                            Margins[i].y = TextRenderer.MeasureText(Text.Substring(0, i), Font).Height;
-                        }*/
-        }
         protected override void OnMouseMove(MouseEventArgs e)
         {
             if (!ClientRectangle.Contains(e.Location))
-            {
                 Capture = false;
-            }
             else if (!Capture)
-            {
                 Capture = true;
-            }
         }
         protected override void OnKeyDown(KeyEventArgs e)
         {
             base.OnKeyDown(e);
             e.SuppressKeyPress = true;
-        }
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-            //Margin.Right
-            /*            Rectangle rect = new Rectangle(Location.X + Margin.Right, Location.Y, Size.Width, Size.Height);
-                        TextRenderer.DrawText(e.Graphics, Text, Font, rect,
-                            ForeColor, BackColor, TextFormatFlags.WordBreak);*/
         }
     }
 }

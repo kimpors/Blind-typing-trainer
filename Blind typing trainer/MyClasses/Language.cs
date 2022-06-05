@@ -14,7 +14,6 @@ namespace Blind_typing_trainer
         string AllTimeOfTraining { get; }
         string AverageSpeed { get; }
         string Info { get; }
-
     }
 
     [Serializable]

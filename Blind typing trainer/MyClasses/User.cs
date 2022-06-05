@@ -9,9 +9,9 @@ namespace Blind_typing_trainer
     {
         public Theme currTheme { get; set; }
         public List<CustomTheme> allThemes { get; set; }
+        public List<float> allRuns { get; set; }
         public ILanguage currLanguage { get; set; }
         public TimeSpan trainingTime { get; set; }
-        public List<float> allRuns = new List<float>();
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("CurrentTheme", currTheme);
@@ -20,7 +20,6 @@ namespace Blind_typing_trainer
             info.AddValue("AllRuns", allRuns);
             info.AddValue("AllThemes", allThemes);
         }
-
         public User(Theme currTheme, ILanguage currLanguage, TimeSpan trainingTime, List<float> allRuns, List<CustomTheme> allThemes)
         {
             this.currTheme = currTheme;
@@ -36,7 +35,6 @@ namespace Blind_typing_trainer
             trainingTime = (TimeSpan)info.GetValue("AllTimeOfTraining", typeof(TimeSpan));
             allRuns = (List<float>)info.GetValue("AllRuns", typeof(List<float>));
             allThemes = (List<CustomTheme>)info.GetValue("AllThemes", typeof(List<CustomTheme>));
-
         }
     }
 }

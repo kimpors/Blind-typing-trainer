@@ -117,56 +117,200 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button4.Text" xml:space="preserve">
-    <value>Текст</value>
-  </data>
-  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
-    <value>Текст</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Текст</value>
-  </data>
-  <data name="fishTextToolStripMenuItem.Text" xml:space="preserve">
-    <value>Текст</value>
-  </data>
-  <data name="infoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Текст</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 20</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Текст</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Текст</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Текст</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Текст</value>
   </data>
-  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 20</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
     <value>Текст</value>
   </data>
-  <data name="nsButton1.Text" xml:space="preserve">
-    <value>Зберегти</value>
-  </data>
-  <data name="russianToolStripMenuItem.Text" xml:space="preserve">
+  <data name="button4.Text" xml:space="preserve">
     <value>Текст</value>
   </data>
-  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 20</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
     <value>Текст</value>
+  </data>
+  <data name="textToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 26</value>
   </data>
   <data name="textToolStripMenuItem.Text" xml:space="preserve">
     <value>Текст</value>
   </data>
-  <data name="themeToolStripMenuItem.Text" xml:space="preserve">
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
     <value>Текст</value>
+  </data>
+  <data name="fishTextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="fishTextToolStripMenuItem.Text" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 26</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="ukranianToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
   </data>
   <data name="ukranianToolStripMenuItem.Text" xml:space="preserve">
     <value>Текст</value>
+  </data>
+  <data name="russianToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="russianToolStripMenuItem.Text" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="themeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="themeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="infoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 26</value>
+  </data>
+  <data name="infoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="Save.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 14</value>
+  </data>
+  <data name="Save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 26</value>
+  </data>
+  <data name="richTextFont.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAbtJREFUaEPlkYFuwzAIRPPp+fNuNx3IS7AXyFEpHdIrsmPe2er2Xa+Hs732fd+e
+        yOc84OG8/x9QZcIjk2VQZcJTknHwErP5aD8LM9YyHjpxtXA2ch73KsCzlPEAr1KryB/tVYBnKcO3uxX5
+        V5kZ4JnKsD8rDv5gNe6NzNzRfhZm1B4wnjPG+RWZsyuYm3vA7HwGhQPAM5VhP6rZ+QwKB4BnKsN+VLPz
+        AN+OzM5F+1mYkXsAioMnosJ+5D7uVYBnKsO+ohjyK+O4rkL3P3wAB7k6l303IvdxrwL99QfMiHwjV85c
+        gXm1B0QzV7k7b8ATyviB1z1XNJPh7rwBz0mG9V/FwfIl7syO8B75B1hRkL5MZSaC+ecHZBnnr1CZiWC+
+        RpZBlQmP/byd6EJZ6PqAf2BYtGNZ40Wq0KmVrlBnweMy652os+BxmfVO1FnwuMx6J+oseFxmvRN1Fjwu
+        s96JOgsel1nvRJ0Fj8usd6LOgsdl1jtRZ8HjMuudqLPgcZn1TtRZ8LjMeifqLHhcZr0TdRY8LrPeiToL
+        HpdZ70SdBY/LrHeizoLHZVy0Y1njRarQqZFlUGXCYz8PZXt9AdOHHdu8P1vAAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="richTextFont.ToolTip" xml:space="preserve">
+    <value>Встановлює шрифт для центральної панелі</value>
+  </data>
+  <data name="SetFont.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAWtJREFUaEPtkNFug0AMBPPp/HmTlbDkwADnw5yLwkrzkO1he/qapunWYHknsPR8
+        8ncGmpkJlh4dcSZeZg/a3QKWhg0fEdtl0D0EloYGVSQigaWoOt7SKsHl/HF1WiS4/AfHWx6ByuiO2wvQ
+        fR4uAwJ620ok9g3d5+EysKxliaG3xl7sDc1YwuXBAp/WRUv0nWHxHX1DcOmGHiWyjND3HnqzB5efQa3p
+        WZoJlwEBpVICS9EjUSGCpYgKKCYRhfa3gqXQ4FE5I4KlGClg6ZHAUlQIKFEJLMUj0JkSAb2NsBX7O92z
+        BZZib5FPdKm9J+j9EVgKDWxJ7+IssBSPwCCwFD8joFRKYCl+TqBKAksREVCqJLAUUQGlQoLLjuMtJjFK
+        hMsTAj4jJLhMFLhaYl3MS7Ni88RyVwbrIvH4Za4QWRcXClgyJb5/zP+hEcmS+P4x6HjlMoEtsqOZfncv
+        WC7xIpnQrihY3gks78P0egOgY+mxIeOV4wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="SetFont.ToolTip" xml:space="preserve">
+    <value>Встановлює шрифт</value>
+  </data>
+  <data name="backColor.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAARtJREFUaEPtkMEKwzAMQ/Pp/fNsAlfToZeIaCPDgleTy5Pd8c48nDGv6xon8j8H
+        HM6Y3w46n/7oKn2Amz6g6APc9AFFH+CmDyj6ADd9QNEHuOkDij7ATR9Q9AFu+oCCB/yCp4VWKdce2Qq7
+        OuGhrB5x7i5dxKWcH2k62qWLuMBDGWY62qWLuMBDGWY62qWLuMBDGWY62qWLuMBDGWY62qWLuMBDGWY6
+        2qWLuMBDGWY62qWLuMBDGWY62qWLuMBDGWY62qWLuMBDGWY62qWLuMBDGWY62qWLuMBDGWY62qWLuMBD
+        GWY62qWLuMBDGWY62qWLuMBDGWY62qWLuMBDGWY62qWLuMBDWT3i3F26iEs598hW2NUJz/05lDFff4dx
+        ph8PdtMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="backColor.ToolTip" xml:space="preserve">
+    <value>Встановлює колір панелі</value>
+  </data>
+  <data name="secondBackColor.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAP9JREFUaEPtkkEKwzAMBP30/NztgtJqQZeYSYqLBvbgywwCjzdz8425K/9zwOYb
+        8ziO8eTUJOgDVtcHBH3A6vqAoA9YXR8Q9AGr6wOCPmB1fUDQB6yuDwj6gNX1AcHngF+MIFyM7Aq3HBCP
+        23e2CML5lVb/lVxuEchj0ipKLrcI5DFpFSWXWwTymLSKksstAnlMWkXJ5RaBPCatouRyi0Aek1ZRcrlF
+        II9Jqyi53CKQx6RVlFxuEchj0ipKLrcI5DFpFSWXWwTymLSKksstAnlMWkXJ5RaBPCatouRyi0Aek1ZR
+        crlFII9Jqyi53CKQx6RP7GwRhJORXQE/YN+N+QL/uZ5rKKVjogAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="secondBackColor.ToolTip" xml:space="preserve">
+    <value>Встановлює колір панелі</value>
+  </data>
+  <data name="foreColor.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAYBJREFUaEPtlYGKhDAMBf10/9zbV/OCDbvB7r0GuhgYxaPOVF247TXH4mzHvu/b
+        EWbkb5VYts3vPMDinF+gElUTHpfZV+km3qAia14n3heBJ5XFG1RkzevE+yLwuKwSNm2fHyfeF4HHZZWo
+        mvDIZCOwaS+6m7g2Ax6XVcKm7bmbuDYDHpdVomrCI5ONwKa99G7i2gx4XFYJm7bnbuLaDHhcVomqCY9M
+        NgKb9tK7iWsz4HFZJWzanruJazPgcVklqiY8MtkIbNpL7yauzYDHZZWwaXvuJq7NgMdllaia8MhkI6ia
+        8MhkI6ia8MhkI6ia8MhkI6ia8MhkI6ia8PBQzrsNjWKuH/kJ2cV02Lpu5FvMef5DVEkz2FC14GmH5wFu
+        woaqBY/LeJ6JugVPOyz/BZ4HuAkbqhY8LuN5JuoWPO2w/Bd4HuAmbKha8LiM55moW/C0w/Jf4HmAm7Ch
+        asHjMp5nom7B4zK7mA5b1418izlPWfsd2cy4vsLmf4GHh0XZjj9tpwm28nNDdwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="foreColor.ToolTip" xml:space="preserve">
+    <value>Встановлює колір тексту</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAICAQAAAABADoAgAANgAAABAQEAAAAAQAKAEAAB4DAAAQEBAAAAAEACgBAABGBAAAKAAAACAA
+        AABAAAAAAQAEAAAAAAAAAgAAAAAAAAAAAAAQAAAAEAAAAAAAAABtMTgAdDxDAHZNUQCMMDsAqy48AJQ4
+        QwC4NUQAkFBXALZEUQCSXWMAoltjAJFnbACoaG8AwEZUAICAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAdwAAAAAAAAAAAAAAAAAAB3d3AAAAAAAAAAAAAAAAB3ZlZwAAAAAAAAAAAAAAAAdZd5Z1
+        AAAAAAAAAAAAAAB3WXl5ZHcAAAAAAAAAAAB0RZd+fplndwAAAAAAAAAHRVd+5+eZmVRncAAAAAAHd1V3
+        5+5+55mVZmJwdww3AHd3d37ud36elZaEEHdxF3B3V3l37ul56ZmYZAd1B0EQB3eXmX7u7p6ZliB3aQch
+        Fwd3WZmZnunpu4YQdZkAAhEQd2aZmZ6emW1BB51lAAByIQB0ZZmJlpuGQQgthwAAADMhABRpmZijEQAz
+        ynAAAAAAM3cHdEYhERB1I8AAAAAAAAAAcDqDIhAHPMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP//+/////v////7////+/////v////7///9+////Pv///h7///wO///4Bv//8AD//+A
+        Af/+AAB//AAAH/AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAADAAAAA8AAAAPwAAAH/AAAH//AAH///
+        x////+/////v////////////KAAAABAAAAAgAAAAAQAEAAAAAACAAAAAAAAAAAAAAAAQAAAAEAAAAAAA
+        AABTJSoAWyUrAFYtMgBeKzEAVjc7AFg4PABnJCsAdk1SAHVSVgBxVlkAelRYAHdbXgC7MUEAiGZqAICA
+        gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN
+        0AAA3QAAAA3QAA1dAAAADU3d3d0AAAAMPd3dnQAAAABjFyuuAAAAAAmIiwAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP//AAD//wAA+P8AAPr/AAD+/wAA/v8AAMZHAADABwAAwAcAAMAHAADABwAAwAcAAOAP
+        AADwHwAA//8AAP//AAAoAAAAEAAAACAAAAABAAQAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        gAAAgAAAAICAAIAAAACAAIAAgIAAAMDAwACAgIAAAAD/AAD/AAAA//8A/wAAAP8A/wD//wAA////AAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA////////////////////////////////////////////////////////////////////////
+        /////////////w==
+</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="Save.Text" xml:space="preserve">
+    <value>Зберегти</value>
   </data>
 </root>

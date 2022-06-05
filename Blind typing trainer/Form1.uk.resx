@@ -190,4 +190,16 @@
   <data name="themeToolStripMenuItem.Text" xml:space="preserve">
     <value>Створити тему</value>
   </data>
+  <data name="Start.Text" xml:space="preserve">
+    <value>Старт</value>
+  </data>
+  <data name="loremIpsumGenerateToolStripMenuItem.Text" xml:space="preserve">
+    <value>Випадковий текст</value>
+  </data>
+  <data name="onlineGeneratorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Онлайн генератор</value>
+  </data>
+  <data name="Reset.ToolTip" xml:space="preserve">
+    <value>Оновлює текст</value>
+  </data>
 </root>
