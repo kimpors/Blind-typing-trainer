@@ -9,22 +9,22 @@ namespace Blind_typing_trainer
         public SaveDialog(Theme currTheme)
         {
             InitializeComponent();
-            currTheme.SetTheme(this);
-            Yes.BackColor = No.BackColor = currTheme.backColor;
-            textBox1.BackColor = currTheme.backColor;
-            textBox1.ForeColor = currTheme.backColor;
-
+            SetTheme(currTheme);
             result = "No Name";
+        }
+
+        void SetTheme(Theme theme)
+        {
+            theme.SetTheme(this);
+            Ok.BackColor = theme.backColor;
+            textBox1.BackColor = theme.backColor;
+            textBox1.ForeColor = theme.foreColor;
         }
 
         void Yes_Click(object sender, EventArgs e)
         {
             if (textBox1.TextLength > 0)
                 result = textBox1.Text;
-        }
-        void No_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

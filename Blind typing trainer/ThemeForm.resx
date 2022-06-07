@@ -135,7 +135,7 @@
     <value>704, -1</value>
   </data>
   <data name="panelShow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 28</value>
+    <value>82, 31</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panelShow.TabIndex" type="System.Int32, mscorlib">

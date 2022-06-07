@@ -9,6 +9,8 @@ namespace Blind_typing_trainer
     {
         User user;
         SaveDialog sd;
+        MyControls.MyFontDialog fontDialog;
+        MyControls.MyColorDialog colDialog;
         Color back, secondBack, fore;
         Font font, rLFont;
         string name;
@@ -19,6 +21,8 @@ namespace Blind_typing_trainer
 
             user = currUser;
             sd = new SaveDialog(currTheme);
+            fontDialog = new MyControls.MyFontDialog(currTheme,currTheme.font);
+            colDialog = new MyControls.MyColorDialog(currTheme);
             SetTheme(currTheme);
 
             back = currTheme.backColor;
@@ -61,9 +65,9 @@ namespace Blind_typing_trainer
 
         void backColor_Click(object sender, EventArgs e)
         {
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            if (colDialog.ShowDialog() == DialogResult.OK)
             {
-                back = colorDialog1.Color;
+                back = colDialog.newColor;
 
                 richTextBox1.BackColor = back;
                 richTextBox1.SelectAll();
@@ -81,9 +85,9 @@ namespace Blind_typing_trainer
         }
         void secondBackColor_Click(object sender, EventArgs e)
         {
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            if (colDialog.ShowDialog() == DialogResult.OK)
             {
-                secondBack = colorDialog1.Color;
+                secondBack = colDialog.newColor;
 
                 panel2.BackColor = secondBack;
                 menuStrip1.BackColor = secondBack;
@@ -93,9 +97,9 @@ namespace Blind_typing_trainer
         }
         void foreColor_Click(object sender, EventArgs e)
         {
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            if (colDialog.ShowDialog() == DialogResult.OK)
             {
-                fore = colorDialog1.Color;
+                fore = colDialog.newColor;
                 ForeColor = fore;
                 richTextBox1.ForeColor = fore;
                 CustomTheme temp = new CustomTheme(back, secondBack, fore, "", font, rLFont);
@@ -105,9 +109,11 @@ namespace Blind_typing_trainer
         }
         void font_Click(object sender, EventArgs e)
         {
-            if (fontDialog1.ShowDialog() == DialogResult.OK)
+            fontDialog = new MyControls.MyFontDialog(user.currTheme, user.currTheme.font);
+
+            if (fontDialog.ShowDialog() == DialogResult.Yes)
             {
-                font = fontDialog1.Font;
+                font = fontDialog.newFont;
 
                 foreach (Panel pn in Controls.OfType<Panel>())
                     foreach (Control ct in pn.Controls)
@@ -129,8 +135,10 @@ namespace Blind_typing_trainer
         }
         void richTextFont_Click(object sender, EventArgs e)
         {
-            if (fontDialog1.ShowDialog() == DialogResult.OK)
-                richTextBox1.Font = rLFont = fontDialog1.Font;
+            fontDialog = new MyControls.MyFontDialog(user.currTheme, user.currTheme.typingFieldFont);
+
+            if (fontDialog.ShowDialog() == DialogResult.Yes)
+                richTextBox1.Font = rLFont = fontDialog.newFont;
         }
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {

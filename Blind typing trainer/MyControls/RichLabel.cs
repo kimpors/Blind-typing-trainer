@@ -8,7 +8,6 @@ namespace Blind_typing_trainer
     public class RichLabel : RichTextBox
     {
         [DefaultValue(true)]
-        public bool Selectable { get; set; }
 
         [DllImport("user32.dll", EntryPoint = "HideCaret")]
         public static extern long HideCaret(IntPtr hwnd);
@@ -30,7 +29,7 @@ namespace Blind_typing_trainer
                     return;
             }
 
-            if (m.Msg == 0x0007/* WM_SETFOCUS*/ && !Selectable)
+            if (m.Msg == 0x0007/* WM_SETFOCUS*/)
                 m.Msg = 0x0008/*WM_KILLFOCUS*/;
 
             base.WndProc(ref m);
@@ -39,7 +38,7 @@ namespace Blind_typing_trainer
 
         public RichLabel() : base()
         {
-            ReadOnly = Selectable = true;
+            ReadOnly = true;
 
             SetStyle(ControlStyles.OptimizedDoubleBuffer |
                 ControlStyles.AllPaintingInWmPaint |
@@ -48,10 +47,6 @@ namespace Blind_typing_trainer
             SetStyle(ControlStyles.Selectable, false);
         }
 
-        protected override void OnReadOnlyChanged(EventArgs e)
-        {
-            ReadOnly = true;
-        }
         protected override void OnMouseMove(MouseEventArgs e)
         {
             if (!ClientRectangle.Contains(e.Location))

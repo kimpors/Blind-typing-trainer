@@ -10,10 +10,9 @@ namespace Blind_typing_trainer
         string Speed { get; }
         string Time { get; }
         string InfoHotKeys { get; }
-        string ShortTextInfo { get; }
         string AllTimeOfTraining { get; }
         string AverageSpeed { get; }
-        string Info { get; }
+        string Record { get; }
     }
 
     [Serializable]
@@ -25,10 +24,9 @@ namespace Blind_typing_trainer
         public string Speed => "Speed:";
         public string Time => "Time:";
         public string InfoHotKeys => "F5 - start\nQ - Open panel";
-        public string ShortTextInfo => "Super short text (al least 1000 letters)";
         public string AllTimeOfTraining => "All time of training:";
         public string AverageSpeed => "Average speed:";
-        public string Info => "Info";
+        public string Record => "Record:";
     }
     [Serializable]
     class Ukranian : ILanguage
@@ -39,10 +37,9 @@ namespace Blind_typing_trainer
         public string Speed => "Швидкість:";
         public string Time => "Час:";
         public string InfoHotKeys => "F5 - Старт\nQ - Відкрити панель";
-        public string ShortTextInfo => "Дуже короткий текст(хоча би 1000 літер)";
         public string AllTimeOfTraining => "Весь час тренувань:";
         public string AverageSpeed => "Середня швидкість:";
-        public string Info => "Інформація";
+        public string Record => "Рекорд:";
     }
     [Serializable]
     class Russian : ILanguage
@@ -53,10 +50,9 @@ namespace Blind_typing_trainer
         public string Speed => "Скорость:";
         public string Time => "Время:";
         public string InfoHotKeys => "F5 - Старт\nQ - Открыть панель";
-        public string ShortTextInfo => "Очень короткий текст(хотя бы 1000 букв)";
         public string AllTimeOfTraining => "Всё время тренировак:";
         public string AverageSpeed => "Средняя скорость:";
-        public string Info => "Информация";
+        public string Record => "Рекорд:";
     }
 
     public interface ISwitchLanguage

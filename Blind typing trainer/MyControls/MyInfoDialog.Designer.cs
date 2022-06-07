@@ -1,6 +1,6 @@
 ﻿namespace Blind_typing_trainer
 {
-    partial class InfoDialog
+    partial class MyInfoDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoDialog));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyInfoDialog));
             this.Ok = new Blind_typing_trainer.NSButton();
             this.richLabel1 = new Blind_typing_trainer.RichLabel();
             this.SuspendLayout();

@@ -217,4 +217,7 @@
   <data name="Reset.ToolTip" xml:space="preserve">
     <value>Обновляет текст</value>
   </data>
+  <data name="record.Text" xml:space="preserve">
+    <value>Рекорд:</value>
+  </data>
 </root>

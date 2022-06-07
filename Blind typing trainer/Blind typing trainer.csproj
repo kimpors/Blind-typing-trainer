@@ -39,7 +39,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -49,6 +49,26 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Images\ProjectIcon.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NLipsum.Core, Version=1.1.0.0, Culture=neutral, PublicKeyToken=593e1df460e1bda0, processorArchitecture=MSIL">
@@ -76,11 +96,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyControls\InfoDialog.cs">
+    <Compile Include="MyControls\MyInfoDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyControls\InfoDialog.Designer.cs">
-      <DependentUpon>InfoDialog.cs</DependentUpon>
+    <Compile Include="MyControls\MyInfoDialog.Designer.cs">
+      <DependentUpon>MyInfoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MyShortTextInfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyControls\MyShortTextInfoDialog.Designer.cs">
+      <DependentUpon>MyShortTextInfoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MyColorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyControls\MyColorDialog.Designer.cs">
+      <DependentUpon>MyColorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\MyFontDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyControls\MyFontDialog.Designer.cs">
+      <DependentUpon>MyFontDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="MyControls\SaveDialog.cs">
       <SubType>Form</SubType>
@@ -122,17 +160,56 @@
     <EmbeddedResource Include="Form1.uk.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyControls\InfoDialog.en.resx">
-      <DependentUpon>InfoDialog.cs</DependentUpon>
+    <EmbeddedResource Include="MyControls\MyInfoDialog.en.resx">
+      <DependentUpon>MyInfoDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyControls\InfoDialog.resx">
-      <DependentUpon>InfoDialog.cs</DependentUpon>
+    <EmbeddedResource Include="MyControls\MyInfoDialog.resx">
+      <DependentUpon>MyInfoDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyControls\InfoDialog.ru.resx">
-      <DependentUpon>InfoDialog.cs</DependentUpon>
+    <EmbeddedResource Include="MyControls\MyInfoDialog.ru.resx">
+      <DependentUpon>MyInfoDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyControls\InfoDialog.uk.resx">
-      <DependentUpon>InfoDialog.cs</DependentUpon>
+    <EmbeddedResource Include="MyControls\MyInfoDialog.uk.resx">
+      <DependentUpon>MyInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\MyShortTextInfoDialog.en.resx">
+      <DependentUpon>MyShortTextInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\MyShortTextInfoDialog.resx">
+      <DependentUpon>MyShortTextInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\MyColorDialog.en.resx">
+      <DependentUpon>MyColorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\MyColorDialog.resx">
+      <DependentUpon>MyColorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\MyColorDialog.ru.resx">
+      <DependentUpon>MyColorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\MyColorDialog.uk.resx">
+      <DependentUpon>MyColorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\MyFontDialog.en.resx">
+      <DependentUpon>MyFontDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\MyFontDialog.resx">
+      <DependentUpon>MyFontDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\MyFontDialog.ru.resx">
+      <DependentUpon>MyFontDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\MyFontDialog.uk.resx">
+      <DependentUpon>MyFontDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\MyShortTextInfoDialog.ru.resx">
+      <DependentUpon>MyShortTextInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\MyShortTextInfoDialog.uk.resx">
+      <DependentUpon>MyShortTextInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\SaveDialog.am.resx">
+      <DependentUpon>SaveDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyControls\SaveDialog.en.resx">
       <DependentUpon>SaveDialog.cs</DependentUpon>
@@ -197,8 +274,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,6 @@
-﻿namespace Blind_typing_trainer
+﻿namespace Blind_typing_trainer.MyControls
 {
-    partial class SaveDialog
+    partial class MyShortTextInfoDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -28,49 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaveDialog));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyShortTextInfoDialog));
             this.Ok = new Blind_typing_trainer.NSButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // Ok
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Name = "textBox1";
+            this.Ok.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.Ok.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.Ok, "Ok");
+            this.Ok.Name = "Ok";
+            this.Ok.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // Ok
-            // 
-            resources.ApplyResources(this.Ok, "Ok");
-            this.Ok.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.Ok.FlatAppearance.BorderSize = 0;
-            this.Ok.Name = "Ok";
-            this.Ok.UseVisualStyleBackColor = true;
-            this.Ok.Click += new System.EventHandler(this.Yes_Click);
-            // 
-            // SaveDialog
+            // MyShortTextInfoDialog
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Ok);
-            this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "SaveDialog";
+            this.Name = "MyShortTextInfoDialog";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
         private NSButton Ok;
         private System.Windows.Forms.Label label1;
     }

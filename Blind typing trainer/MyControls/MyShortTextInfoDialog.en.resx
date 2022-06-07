@@ -117,92 +117,51 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Time.Text" xml:space="preserve">
-    <value>Час: 00:00:00</value>
-  </data>
-  <data name="Speed.Text" xml:space="preserve">
-    <value>Швидкість: 0WP</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAdhJREFUWEftlUtOwlAUhukjEBIGpCtgCagb6NwFGGddh4l7cA3GxAU40IHEmROj
-        U0bOdCBGfOALEcr/X84lBdrChQZj0i85/L3ntvc/7X1QyMmZR71eDyGxgb4WNHvCMLS0seM4M8bTgXsf
-        oNlAc8/zJoyr1Sp1DO+RnO7/VR2rgoGdcrkca7oWWABFwhhMxRnkB9ET7TJn23bXdd1vtJOhuZ53CSNK
-        pdIzTF5wSSM+/4X4oFqWlW5OUIBLYSz5+Tv8wbPNSqVyj5fZU9lF4RcoFoszb4+8jeCuuPV9/1TScTyJ
-        sogGFjGL2JFUMkEQHFJZAEVCwZyeFgzKz5nGuACC+09QxJ00U1GG0QJ4rc31dsTbc4GlwfmfpoUx9uU6
-        HiyQEHNGU7tWqykztqkMg/XwJhrlEcHFmI6Y8C3bWMmmxppP0SiviPk7IAtQOM2mYVE8D/6MLiKbY9oU
-        LL5LTCP/LfujzPrpo4grFDGxPRcGC/IIA5xL0wg8d4Pt20MMME5D0mbgwV0M0MFg6qBaBNx7DeEOeuep
-        Cm2PepYEK3sbfzLH0kwF5hc0hHL7DlY21+Cg2oCoswGxxVwCBwgaN0fNDMGgmxAWwFMtGtxm/NQeNCcn
-        5z9SKAwByP7Tbtg3ptsAAAAASUVORK5CYII=
-</value>
+  <data name="Ok.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 40</value>
   </data>
-  <data name="Theme.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAltJREFUWEftVstOAkEQZFVADDHEDzBcvGP8AY7e5BP4SO8ePSkH48mTiQE10VWD
-        j/hgrOrpJsMu0QUZvVhJ2z29PVM1PbMupSx6vZ5rNBoOoVir1XJpmr46506k4LcBQXsURCHAOizRR4WB
-        OcuBLWnao8iCnGgi0I1NTRcC6huY94LQtdvtfo6v2+2ea/gt0I3dTqfDoykEEA8oHPO2NZVHsLONrDq2
-        i7uHlWEVWBW2qp5j5ldgudZizSe9S98DCndYjBZhHZdwMRqF4XEhYy3nIhY0m03mZ4MSl42YosJFv4J1
-        smj9VGDyGheZhdjA+h+JwKSqkWsqBy4M45mbLesjAZ97N5+Amnduw2c8uBjM3uEVOx6a7lbuixR7MDdf
-        B7xzWz4jAyEPSfV4RIx2a6LtdgyMZwIWWMpOZo5jJZVXMhRD45ujcYjsuBhAsOadbym8nen4lQw6IDtW
-        PyZE3VA7Mzu4WLYLHNfr9RyxwTqkcX9u8gwmFjFRwOSHxCOsXQi5EMKNO8FdmwiOM5Acnp2h5lEyi4KS
-        PjDW1k8VgJor1H7oeLHAwikILjSe6AJi+dohnCZsoRipJ0Iyi+MKwC5vsNtjHYZkJiwUGA3TyEYQdgiB
-        1zqOh0qlwp9VJDfjpWM34ly+EPh3uw8nF1B/tEgMUS5Jko9arZb6yrjgbrNmu2d3omOEs75lgN1f6uvH
-        O3AA/8x8bLzxDwiPQf7OI8DQTJ5FBUiP8FG6g5f/jPBDOPsQxb+IBMjYarb9lGP+8mUnkL/n+NcAQt4F
-        ChnAswN/Ax6DivnHnCiVPgECe+KKYiOGzgAAAABJRU5ErkJggg==
-</value>
+  <data name="Ok.Text" xml:space="preserve">
+    <value>Ok</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Весь час тренувань: </value>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 26</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Середня швидкість: </value>
+    <value>Super short text (al least 1000 letters)</value>
   </data>
-  <data name="openToolStripMenuItem.Text" xml:space="preserve">
-    <value>Файл</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>253, 68</value>
   </data>
-  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="ukraineToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ukranian</value>
-  </data>
-  <data name="russiaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Russian</value>
-  </data>
-  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Мова</value>
-  </data>
-  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Налаштування</value>
-  </data>
-  <data name="infoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Інформація</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Текст</value>
-  </data>
-  <data name="themeSelectToolStripMenuItem.Text" xml:space="preserve">
-    <value>Обрати тему</value>
-  </data>
-  <data name="themeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Створити тему</value>
-  </data>
-  <data name="Start.Text" xml:space="preserve">
-    <value>Старт</value>
-  </data>
-  <data name="loremIpsumGenerateToolStripMenuItem.Text" xml:space="preserve">
-    <value>Випадковий текст</value>
-  </data>
-  <data name="onlineGeneratorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Онлайн генератор</value>
-  </data>
-  <data name="Reset.ToolTip" xml:space="preserve">
-    <value>Оновлює текст</value>
-  </data>
-  <data name="record.Text" xml:space="preserve">
-    <value>Рекорд:</value>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAICAQAAAABADoAgAANgAAABAQEAAAAAQAKAEAAB4DAAAQEBAAAAAEACgBAABGBAAAKAAAACAA
+        AABAAAAAAQAEAAAAAAAAAgAAAAAAAAAAAAAQAAAAEAAAAAAAAABtMTgAdDxDAHZNUQCMMDsAqy48AJQ4
+        QwC4NUQAkFBXALZEUQCSXWMAoltjAJFnbACoaG8AwEZUAICAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAdwAAAAAAAAAAAAAAAAAAB3d3AAAAAAAAAAAAAAAAB3ZlZwAAAAAAAAAAAAAAAAdZd5Z1
+        AAAAAAAAAAAAAAB3WXl5ZHcAAAAAAAAAAAB0RZd+fplndwAAAAAAAAAHRVd+5+eZmVRncAAAAAAHd1V3
+        5+5+55mVZmJwdww3AHd3d37ud36elZaEEHdxF3B3V3l37ul56ZmYZAd1B0EQB3eXmX7u7p6ZliB3aQch
+        Fwd3WZmZnunpu4YQdZkAAhEQd2aZmZ6emW1BB51lAAByIQB0ZZmJlpuGQQgthwAAADMhABRpmZijEQAz
+        ynAAAAAAM3cHdEYhERB1I8AAAAAAAAAAcDqDIhAHPMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP//+/////v////7////+/////v////7///9+////Pv///h7///wO///4Bv//8AD//+A
+        Af/+AAB//AAAH/AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAADAAAAA8AAAAPwAAAH/AAAH//AAH///
+        x////+/////v////////////KAAAABAAAAAgAAAAAQAEAAAAAACAAAAAAAAAAAAAAAAQAAAAEAAAAAAA
+        AABTJSoAWyUrAFYtMgBeKzEAVjc7AFg4PABnJCsAdk1SAHVSVgBxVlkAelRYAHdbXgC7MUEAiGZqAICA
+        gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN
+        0AAA3QAAAA3QAA1dAAAADU3d3d0AAAAMPd3dnQAAAABjFyuuAAAAAAmIiwAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP//AAD//wAA+P8AAPr/AAD+/wAA/v8AAMZHAADABwAAwAcAAMAHAADABwAAwAcAAOAP
+        AADwHwAA//8AAP//AAAoAAAAEAAAACAAAAABAAQAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        gAAAgAAAAICAAIAAAACAAIAAgIAAAMDAwACAgIAAAAD/AAD/AAAA//8A/wAAAP8A/wD//wAA////AAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA////////////////////////////////////////////////////////////////////////
+        /////////////w==
+</value>
   </data>
 </root>

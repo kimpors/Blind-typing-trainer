@@ -11,13 +11,13 @@ namespace Blind_typing_trainer
     public abstract class Theme
     {
         public Theme() { }
-        public Theme(Color back, Color secondBack, Color fore, Font font, Font TypingFieldFont)
+        public Theme(Color back, Color secondBack, Color fore, Font font, Font typingFieldFont)
         {
             backColor = back;
             foreColor = fore;
             secondBackColor = secondBack;
             this.font = font;
-            this.typingFieldFont = TypingFieldFont;
+            this.typingFieldFont = typingFieldFont;
         }
         public Theme(Theme th)
         {
@@ -34,11 +34,12 @@ namespace Blind_typing_trainer
         public virtual Font font { get; }
         public virtual Font typingFieldFont { get; }
 
-        public void SetTheme(Form f)
+        public void SetTheme(Form f, bool isNeedChangeFont = true)
         {
             f.BackColor = secondBackColor;
             f.ForeColor = foreColor;
-            f.Font = font;
+            if(!isNeedChangeFont) f.Font = font;
+
 
             List<Panel> panel = f.Controls.OfType<Panel>().ToList();
             foreach (Panel pn in panel)
@@ -48,13 +49,13 @@ namespace Blind_typing_trainer
                     if (ct is Label)
                     {
                         ct.ForeColor = foreColor;
-                        ct.Font = font;
+                        if (isNeedChangeFont) ct.Font = font;
                     }
                     else if (ct is NSButton)
                     {
                         ct.ForeColor = foreColor;
                         ct.BackColor = backColor;
-                        ct.Font = font;
+                        if (isNeedChangeFont) ct.Font = font;
                     }
                 }
             }
@@ -64,7 +65,7 @@ namespace Blind_typing_trainer
             {
                 rl.BackColor = backColor;
                 rl.ForeColor = foreColor;
-                rl.Font = typingFieldFont;
+                if (isNeedChangeFont) rl.Font = typingFieldFont;
             }
 
             List<RichTextBox> richTextBox = f.Controls.OfType<RichTextBox>().ToList();
@@ -72,7 +73,7 @@ namespace Blind_typing_trainer
             {
                 rb.BackColor = backColor;
                 rb.ForeColor = foreColor;
-                rb.Font = font;
+                if (isNeedChangeFont) rb.Font = font;
 
                 rb.SelectAll();
                 rb.SelectionBackColor = backColor;
@@ -197,7 +198,6 @@ namespace Blind_typing_trainer
             : base(back, secondBack, fore, f, TypingFieldFont) { Name = name; }
     }
 
-
     [Serializable]
     public sealed class Light : Theme
     {
@@ -218,7 +218,6 @@ namespace Blind_typing_trainer
         public override Font font => new Font("Calibri", 12f);
         public override Font typingFieldFont => new Font("Calibri", 13.5f);
     }
-
 
     public interface ISwitchTheme
     {

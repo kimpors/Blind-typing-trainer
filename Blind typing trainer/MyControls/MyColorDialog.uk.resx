@@ -117,122 +117,57 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;Yes.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="No.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="Save.Text" xml:space="preserve">
+    <value>Зберегти</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>184, 101</value>
-  </data>
-  <data name="No.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="No.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 66</value>
-  </data>
-  <data name="&gt;&gt;No.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;Ok.Name" xml:space="preserve">
-    <value>Ok</value>
-  </data>
-  <data name="&gt;&gt;Ok.Type" xml:space="preserve">
-    <value>Blind_typing_trainer.NSButton, Blind typing trainer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="No.Text" xml:space="preserve">
-    <value>No</value>
-  </data>
-  <data name="Yes.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;No.Name" xml:space="preserve">
-    <value>No</value>
-  </data>
-  <data name="Ok.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Yes.Name" xml:space="preserve">
-    <value>Yes</value>
-  </data>
-  <data name="No.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Ok.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 66</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="&gt;&gt;No.Type" xml:space="preserve">
-    <value>Blind_typing_trainer.NSButton, Blind typing trainer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="Yes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SaveDialog</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 19</value>
-  </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 41</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Theme Name</value>
-  </data>
-  <data name="&gt;&gt;Ok.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Yes.Type" xml:space="preserve">
-    <value>Blind_typing_trainer.NSButton, Blind typing trainer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Yes.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="No.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Yes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 66</value>
-  </data>
-  <data name="Ok.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        X//Z
+</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -262,43 +197,4 @@
         /////////////w==
 </value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="Yes.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
-  </data>
-  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;Yes.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Ok.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;No.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Yes.Text" xml:space="preserve">
-    <value>Yes</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ru</value>
-  </metadata>
 </root>

@@ -118,56 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Reset.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAhNJREFUaEPVkIGOgzAMQ/fp/PndjGbkZi5NSoeEpacbJnHMvbZtezTWfBLWfBLW
-        fBLW/BVv/RH3fgZrXkFLRlTqu5ws1qyiZUBV3HPZI6xZYba008xHWHMES68qrmKuu+uw5hm/Kh6V/Qhr
-        9rirPJX5CGs6VhfnP8OhwrPrQ6ypuNAZMYe4WyTOAjcHrKlg+YoyJTL09r+MCBZnhd3e4VVYk1wt7zJX
-        0z6EozMfgJ2Y80vaBzmM3zO6szxoHy5+AHY04w7aBymAvxXp7p20D58SpCLMa9ZdtA/F0hQ/WLOU0fsr
-        tA+fQ1XFcswh+m6Gs7xmcDfeAzPSAyRmV4hZFH43c/qwG2EhK+6BmJlFM0gU/WNHA3ajs9gT50nMGxH3
-        wUiYOfY17DAHQXxPXMYZcZ9khdkjS4MPsxNIn7jdDDEHVMSdPSuG76YEO9xOht4+vKqY0wQpGIi4uRUg
-        u6qjlwskGHD+SlgkK53dd13onVTLf+FC74IlssJs3O2GRv8X4E5WrtfuqdG8MAsrYX5WvS5fBmF4b/Eq
-        zM/orIM1CY+cBcyAPGaPNLptTaJHRkEZkKGZGY3uWlPRgyzg5npwh1SEeZepWDMSD7OMmyWcmdUon1jT
-        4QrRc8yK+66Dw5pnXCk3UqU4seYIHFr5Icxzt0ZYMwsPg6p012VnseYMWohQ7p3LmMGaq1hd1mHNJ2HN
-        57C9/gGoIWJHfaI4KAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="Reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAdhJREFUWEftlUtOwlAUhukjEBIGpCtgCagb6NwFGGddh4l7cA3GxAU40IHEmROj
-        U0bOdCBGfOALEcr/X84lBdrChQZj0i85/L3ntvc/7X1QyMmZR71eDyGxgb4WNHvCMLS0seM4M8bTgXsf
-        oNlAc8/zJoyr1Sp1DO+RnO7/VR2rgoGdcrkca7oWWABFwhhMxRnkB9ET7TJn23bXdd1vtJOhuZ53CSNK
-        pdIzTF5wSSM+/4X4oFqWlW5OUIBLYSz5+Tv8wbPNSqVyj5fZU9lF4RcoFoszb4+8jeCuuPV9/1TScTyJ
-        sogGFjGL2JFUMkEQHFJZAEVCwZyeFgzKz5nGuACC+09QxJ00U1GG0QJ4rc31dsTbc4GlwfmfpoUx9uU6
-        HiyQEHNGU7tWqykztqkMg/XwJhrlEcHFmI6Y8C3bWMmmxppP0SiviPk7IAtQOM2mYVE8D/6MLiKbY9oU
-        LL5LTCP/LfujzPrpo4grFDGxPRcGC/IIA5xL0wg8d4Pt20MMME5D0mbgwV0M0MFg6qBaBNx7DeEOeuep
-        Cm2PepYEK3sbfzLH0kwF5hc0hHL7DlY21+Cg2oCoswGxxVwCBwgaN0fNDMGgmxAWwFMtGtxm/NQeNCcn
-        5z9SKAwByP7Tbtg3ptsAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="StartTimer.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Time.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Speed.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="record.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="allTime.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="aveSpeed.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chart1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 22</value>
   </data>
@@ -198,26 +148,34 @@
   <data name="themeSelectToolStripMenuItem.Text" xml:space="preserve">
     <value>Select theme</value>
   </data>
-  <data name="menuStrip1.ToolTip" xml:space="preserve">
-    <value />
+  <data name="Reset.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAhNJREFUaEPVkIGOgzAMQ/fp/PndjGbkZi5NSoeEpacbJnHMvbZtezTWfBLWfBLW
+        fBLW/BVv/RH3fgZrXkFLRlTqu5ws1qyiZUBV3HPZI6xZYba008xHWHMES68qrmKuu+uw5hm/Kh6V/Qhr
+        9rirPJX5CGs6VhfnP8OhwrPrQ6ypuNAZMYe4WyTOAjcHrKlg+YoyJTL09r+MCBZnhd3e4VVYk1wt7zJX
+        0z6EozMfgJ2Y80vaBzmM3zO6szxoHy5+AHY04w7aBymAvxXp7p20D58SpCLMa9ZdtA/F0hQ/WLOU0fsr
+        tA+fQ1XFcswh+m6Gs7xmcDfeAzPSAyRmV4hZFH43c/qwG2EhK+6BmJlFM0gU/WNHA3ajs9gT50nMGxH3
+        wUiYOfY17DAHQXxPXMYZcZ9khdkjS4MPsxNIn7jdDDEHVMSdPSuG76YEO9xOht4+vKqY0wQpGIi4uRUg
+        u6qjlwskGHD+SlgkK53dd13onVTLf+FC74IlssJs3O2GRv8X4E5WrtfuqdG8MAsrYX5WvS5fBmF4b/Eq
+        zM/orIM1CY+cBcyAPGaPNLptTaJHRkEZkKGZGY3uWlPRgyzg5npwh1SEeZepWDMSD7OMmyWcmdUon1jT
+        4QrRc8yK+66Dw5pnXCk3UqU4seYIHFr5Icxzt0ZYMwsPg6p012VnseYMWohQ7p3LmMGaq1hd1mHNJ2HN
+        57C9/gGoIWJHfaI4KAAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="panel2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Start.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panel1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panelShow.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TypingField.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TypingField.ToolTip" xml:space="preserve">
-    <value />
+  <data name="Reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAdhJREFUWEftlUtOwlAUhukjEBIGpCtgCagb6NwFGGddh4l7cA3GxAU40IHEmROj
+        U0bOdCBGfOALEcr/X84lBdrChQZj0i85/L3ntvc/7X1QyMmZR71eDyGxgb4WNHvCMLS0seM4M8bTgXsf
+        oNlAc8/zJoyr1Sp1DO+RnO7/VR2rgoGdcrkca7oWWABFwhhMxRnkB9ET7TJn23bXdd1vtJOhuZ53CSNK
+        pdIzTF5wSSM+/4X4oFqWlW5OUIBLYSz5+Tv8wbPNSqVyj5fZU9lF4RcoFoszb4+8jeCuuPV9/1TScTyJ
+        sogGFjGL2JFUMkEQHFJZAEVCwZyeFgzKz5nGuACC+09QxJ00U1GG0QJ4rc31dsTbc4GlwfmfpoUx9uU6
+        HiyQEHNGU7tWqykztqkMg/XwJhrlEcHFmI6Y8C3bWMmmxppP0SiviPk7IAtQOM2mYVE8D/6MLiKbY9oU
+        LL5LTCP/LfujzPrpo4grFDGxPRcGC/IIA5xL0wg8d4Pt20MMME5D0mbgwV0M0MFg6qBaBNx7DeEOeuep
+        Cm2PepYEK3sbfzLH0kwF5hc0hHL7DlY21+Cg2oCoswGxxVwCBwgaN0fNDMGgmxAWwFMtGtxm/NQeNCcn
+        5z9SKAwByP7Tbtg3ptsAAAAASUVORK5CYII=
+</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -247,7 +205,7 @@
         /////////////w==
 </value>
   </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
+  <data name="record.Text" xml:space="preserve">
+    <value>Record:</value>
   </data>
 </root>

@@ -35,7 +35,6 @@
             this.timerTick = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.Reset = new Blind_typing_trainer.NSButton();
             this.StartTimer = new System.Windows.Forms.Label();
             this.Time = new System.Windows.Forms.Label();
             this.Speed = new System.Windows.Forms.Label();
@@ -56,11 +55,12 @@
             this.themeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.themeSelectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Start = new Blind_typing_trainer.NSButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelShow = new Blind_typing_trainer.NSButton();
+            this.Reset = new Blind_typing_trainer.NSButton();
+            this.Start = new Blind_typing_trainer.NSButton();
             this.TypingField = new Blind_typing_trainer.RichLabel();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -76,16 +76,6 @@
             // openFileDialog1
             // 
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
-            // 
-            // Reset
-            // 
-            resources.ApplyResources(this.Reset, "Reset");
-            this.Reset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Reset.FlatAppearance.BorderSize = 0;
-            this.Reset.Name = "Reset";
-            this.toolTip1.SetToolTip(this.Reset, resources.GetString("Reset.ToolTip"));
-            this.Reset.UseVisualStyleBackColor = true;
-            this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // StartTimer
             // 
@@ -264,6 +254,7 @@
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.CausesValidation = false;
             this.panel1.Controls.Add(this.Reset);
             this.panel1.Controls.Add(this.Start);
             this.panel1.Controls.Add(this.record);
@@ -274,6 +265,25 @@
             this.panel1.Name = "panel1";
             this.toolTip1.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
             // 
+            // panelShow
+            // 
+            resources.ApplyResources(this.panelShow, "panelShow");
+            this.panelShow.FlatAppearance.BorderSize = 0;
+            this.panelShow.Name = "panelShow";
+            this.toolTip1.SetToolTip(this.panelShow, resources.GetString("panelShow.ToolTip"));
+            this.panelShow.UseVisualStyleBackColor = true;
+            this.panelShow.Click += new System.EventHandler(this.panelShow_Click);
+            // 
+            // Reset
+            // 
+            resources.ApplyResources(this.Reset, "Reset");
+            this.Reset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Reset.FlatAppearance.BorderSize = 0;
+            this.Reset.Name = "Reset";
+            this.toolTip1.SetToolTip(this.Reset, resources.GetString("Reset.ToolTip"));
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            // 
             // Start
             // 
             resources.ApplyResources(this.Start, "Start");
@@ -283,15 +293,6 @@
             this.toolTip1.SetToolTip(this.Start, resources.GetString("Start.ToolTip"));
             this.Start.UseVisualStyleBackColor = true;
             this.Start.Click += new System.EventHandler(this.Start_Click);
-            // 
-            // panelShow
-            // 
-            resources.ApplyResources(this.panelShow, "panelShow");
-            this.panelShow.FlatAppearance.BorderSize = 0;
-            this.panelShow.Name = "panelShow";
-            this.toolTip1.SetToolTip(this.panelShow, resources.GetString("panelShow.ToolTip"));
-            this.panelShow.UseVisualStyleBackColor = true;
-            this.panelShow.Click += new System.EventHandler(this.panelShow_Click);
             // 
             // TypingField
             // 

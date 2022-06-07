@@ -82,7 +82,7 @@ namespace Blind_typing_trainer
             // Stats
             aveSpeed.Text = currLanguage.AverageSpeed + " " + user.allRuns.Average().ToString(".00");
             allTime.Text = currLanguage.AllTimeOfTraining + " " + user.trainingTime.ToString();
-            record.Text = "Record: " + user.allRuns.Max().ToString(".00");
+            record.Text = currLanguage.Record + " " + user.allRuns.Max().ToString(".00");
 
             chart1.Series[0].Points.Clear();
             foreach (var item in user.allRuns)
@@ -114,7 +114,7 @@ namespace Blind_typing_trainer
 
                         if (symbolCount == mistakePos) mistakePos = NOTHING;
 
-                        SetTheme();
+                        SetTheme(false);
                         PaintLetters();
                     }
                     return;
@@ -156,9 +156,9 @@ namespace Blind_typing_trainer
         }
 
 
-        void SetTheme()
+        void SetTheme(bool isNeedChangeFont = true)
         {
-            currTheme.SetTheme(this);
+            currTheme.SetTheme(this, isNeedChangeFont);
             currTheme.SetChartTheme(chart1);
             currTheme.SetMenuTheme(menuStrip1);
 
@@ -175,7 +175,6 @@ namespace Blind_typing_trainer
                 TypingField.Select(0, mistakePos != NOTHING ? mistakePos : symbolCount);
                 TypingField.SelectionColor = Color.LimeGreen;
             }
-
 
             if (mistakePos != NOTHING)
             {
@@ -220,7 +219,7 @@ namespace Blind_typing_trainer
             {
                 aveSpeed.Text = currLanguage.AverageSpeed + " " + user.allRuns.Average().ToString(".00");
                 allTime.Text = currLanguage.AllTimeOfTraining + " " + user.trainingTime;
-                record.Text = "Record: " + user.allRuns.Max().ToString(".00");
+                record.Text = currLanguage.Record + " " + user.allRuns.Max().ToString(".00");
 
                 chart1.Series[0].Points.Clear();
                 foreach (var item in user.allRuns)
@@ -327,7 +326,10 @@ namespace Blind_typing_trainer
 
                 if (allText.Length < 1000)
                 {
-                    MessageBox.Show(currLanguage.ShortTextInfo, currLanguage.Info, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MyControls.MyShortTextInfoDialog a = new MyControls.MyShortTextInfoDialog(currTheme);
+                    a.ShowDialog();
+                    //MessageBox.Show(currLanguage.ShortTextInfo, currLanguage.Info, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     allText = currLanguage.Standart;
                 }
 
@@ -350,7 +352,7 @@ namespace Blind_typing_trainer
 
         void infoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InfoDialog id = new InfoDialog(currTheme);
+            MyInfoDialog id = new MyInfoDialog(currTheme);
             id.ShowDialog();
         }
         void themeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -380,7 +382,7 @@ namespace Blind_typing_trainer
                 raceResult = (symbolCount + mistakeCount) / timer.TotalMinutes / 5;
                 Speed.Text = $"{currLanguage.Speed} " + ((int)raceResult).ToString() + "WP";
             }
-            else 
+            else
             { StartTimer.Text = StartTimer.Text != "1" ? (int.Parse(StartTimer.Text) - 1).ToString() : StartTyping; }
         }
     }

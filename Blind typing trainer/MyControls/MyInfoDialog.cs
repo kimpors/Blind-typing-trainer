@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace Blind_typing_trainer
 {
-    public partial class InfoDialog : Form
+    public partial class MyInfoDialog : Form
     {
-        public InfoDialog(Theme currTheme)
+        public MyInfoDialog(Theme currTheme)
         {
             InitializeComponent();
 
